@@ -18,11 +18,23 @@
 #pragma mark - Setter
 
 - (void)setProduct:(MAProduct *)product {
-  NSURL *url = [NSURL ma_URLWithNonEncodedString:product.photoListUri];
-  [self.picture sd_setImageWithURL:url];
+  NSURL *pictureURL = [NSURL ma_URLWithNonEncodedString:product.photoListUri];
+  [self.picture sd_setImageWithURL:pictureURL];
   
   self.title.text = product.title;
   self.price.text = product.price;
+  
+  NSURL *userPictureURL = [NSURL ma_URLWithNonEncodedString:product.user.avatarUri];
+  [self.userPicture sd_setImageWithURL:userPictureURL];
+}
+
+#pragma mark - View Lifecycle
+
+- (void)awakeFromNib {
+  [super awakeFromNib];
+  
+  self.userPicture.layer.cornerRadius = CGRectGetWidth(self.userPicture.bounds) / 2;
+  self.userPicture.clipsToBounds = YES;
 }
 
 @end

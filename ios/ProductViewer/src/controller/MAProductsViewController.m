@@ -108,7 +108,7 @@ return NO;
 
 #pragma mark - UICollectionViewDelegateFlowLayout
 
-int const ProductHeight = 238;
+int const ProductHeight = 260;
 int const ProductColumns = 2;
 
 - (CGSize)collectionView:(UICollectionView *)collectionView
