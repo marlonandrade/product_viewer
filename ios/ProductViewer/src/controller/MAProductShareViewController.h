@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MAProductShareViewController.h
 //  ProductViewer
 //
 //  Created by Marlon Andrade on 9/11/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MAProductShareViewController : UIViewController
 
 @end
-

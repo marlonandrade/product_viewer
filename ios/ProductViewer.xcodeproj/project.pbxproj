@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		BFC866C71BA35199002CF7C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC866C61BA35199002CF7C4 /* main.m */; };
-		BFC866CA1BA35199002CF7C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC866C91BA35199002CF7C4 /* AppDelegate.m */; };
-		BFC866CD1BA35199002CF7C4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC866CC1BA35199002CF7C4 /* ViewController.m */; };
-		BFC866D01BA35199002CF7C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFC866CE1BA35199002CF7C4 /* Main.storyboard */; };
-		BFC866D21BA35199002CF7C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFC866D11BA35199002CF7C4 /* Assets.xcassets */; };
-		BFC866D51BA35199002CF7C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFC866D31BA35199002CF7C4 /* LaunchScreen.storyboard */; };
 		BFC866E01BA35199002CF7C4 /* ProductViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC866DF1BA35199002CF7C4 /* ProductViewerTests.m */; };
+		BFC866F61BA3527C002CF7C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFC866EB1BA3527C002CF7C4 /* Assets.xcassets */; };
+		BFC866F71BA3527C002CF7C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFC866EC1BA3527C002CF7C4 /* LaunchScreen.storyboard */; };
+		BFC866F81BA3527C002CF7C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFC866EE1BA3527C002CF7C4 /* Main.storyboard */; };
+		BFC866F91BA3527C002CF7C4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFC866F01BA3527C002CF7C4 /* Info.plist */; };
+		BFC866FA1BA3527C002CF7C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC866F31BA3527C002CF7C4 /* AppDelegate.m */; };
+		BFC867001BA352AF002CF7C4 /* MAProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC866FF1BA352AF002CF7C4 /* MAProductsViewController.m */; };
+		BFC867031BA352CE002CF7C4 /* MAProductDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC867021BA352CE002CF7C4 /* MAProductDetailViewController.m */; };
+		BFC867061BA352D8002CF7C4 /* MAProductShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC867051BA352D8002CF7C4 /* MAProductShareViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,17 +32,21 @@
 /* Begin PBXFileReference section */
 		BFC866C21BA35199002CF7C4 /* ProductViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC866C61BA35199002CF7C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BFC866C81BA35199002CF7C4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		BFC866C91BA35199002CF7C4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BFC866CB1BA35199002CF7C4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BFC866CC1BA35199002CF7C4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		BFC866CF1BA35199002CF7C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BFC866D11BA35199002CF7C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BFC866D41BA35199002CF7C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BFC866D61BA35199002CF7C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFC866DB1BA35199002CF7C4 /* ProductViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProductViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC866DF1BA35199002CF7C4 /* ProductViewerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductViewerTests.m; sourceTree = "<group>"; };
 		BFC866E11BA35199002CF7C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFC866EB1BA3527C002CF7C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BFC866ED1BA3527C002CF7C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BFC866EF1BA3527C002CF7C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BFC866F01BA3527C002CF7C4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFC866F21BA3527C002CF7C4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BFC866F31BA3527C002CF7C4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BFC866FE1BA352AF002CF7C4 /* MAProductsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAProductsViewController.h; sourceTree = "<group>"; };
+		BFC866FF1BA352AF002CF7C4 /* MAProductsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAProductsViewController.m; sourceTree = "<group>"; };
+		BFC867011BA352CE002CF7C4 /* MAProductDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAProductDetailViewController.h; sourceTree = "<group>"; };
+		BFC867021BA352CE002CF7C4 /* MAProductDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAProductDetailViewController.m; sourceTree = "<group>"; };
+		BFC867041BA352D8002CF7C4 /* MAProductShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAProductShareViewController.h; sourceTree = "<group>"; };
+		BFC867051BA352D8002CF7C4 /* MAProductShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAProductShareViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,14 +88,8 @@
 		BFC866C41BA35199002CF7C4 /* ProductViewer */ = {
 			isa = PBXGroup;
 			children = (
-				BFC866C81BA35199002CF7C4 /* AppDelegate.h */,
-				BFC866C91BA35199002CF7C4 /* AppDelegate.m */,
-				BFC866CB1BA35199002CF7C4 /* ViewController.h */,
-				BFC866CC1BA35199002CF7C4 /* ViewController.m */,
-				BFC866CE1BA35199002CF7C4 /* Main.storyboard */,
-				BFC866D11BA35199002CF7C4 /* Assets.xcassets */,
-				BFC866D31BA35199002CF7C4 /* LaunchScreen.storyboard */,
-				BFC866D61BA35199002CF7C4 /* Info.plist */,
+				BFC866F11BA3527C002CF7C4 /* src */,
+				BFC866EA1BA3527C002CF7C4 /* res */,
 				BFC866C51BA35199002CF7C4 /* Supporting Files */,
 			);
 			path = ProductViewer;
@@ -109,6 +110,48 @@
 				BFC866E11BA35199002CF7C4 /* Info.plist */,
 			);
 			path = ProductViewerTests;
+			sourceTree = "<group>";
+		};
+		BFC866EA1BA3527C002CF7C4 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				BFC866EB1BA3527C002CF7C4 /* Assets.xcassets */,
+				BFC866EC1BA3527C002CF7C4 /* LaunchScreen.storyboard */,
+				BFC866EE1BA3527C002CF7C4 /* Main.storyboard */,
+				BFC866F01BA3527C002CF7C4 /* Info.plist */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		BFC866F11BA3527C002CF7C4 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				BFC866F21BA3527C002CF7C4 /* AppDelegate.h */,
+				BFC866F31BA3527C002CF7C4 /* AppDelegate.m */,
+				BFC866F41BA3527C002CF7C4 /* controller */,
+				BFC866F51BA3527C002CF7C4 /* model */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		BFC866F41BA3527C002CF7C4 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				BFC866FE1BA352AF002CF7C4 /* MAProductsViewController.h */,
+				BFC866FF1BA352AF002CF7C4 /* MAProductsViewController.m */,
+				BFC867011BA352CE002CF7C4 /* MAProductDetailViewController.h */,
+				BFC867021BA352CE002CF7C4 /* MAProductDetailViewController.m */,
+				BFC867041BA352D8002CF7C4 /* MAProductShareViewController.h */,
+				BFC867051BA352D8002CF7C4 /* MAProductShareViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		BFC866F51BA3527C002CF7C4 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,9 +234,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFC866D51BA35199002CF7C4 /* LaunchScreen.storyboard in Resources */,
-				BFC866D21BA35199002CF7C4 /* Assets.xcassets in Resources */,
-				BFC866D01BA35199002CF7C4 /* Main.storyboard in Resources */,
+				BFC866F91BA3527C002CF7C4 /* Info.plist in Resources */,
+				BFC866F81BA3527C002CF7C4 /* Main.storyboard in Resources */,
+				BFC866F61BA3527C002CF7C4 /* Assets.xcassets in Resources */,
+				BFC866F71BA3527C002CF7C4 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,9 +255,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFC866CD1BA35199002CF7C4 /* ViewController.m in Sources */,
-				BFC866CA1BA35199002CF7C4 /* AppDelegate.m in Sources */,
+				BFC866FA1BA3527C002CF7C4 /* AppDelegate.m in Sources */,
+				BFC867001BA352AF002CF7C4 /* MAProductsViewController.m in Sources */,
+				BFC867061BA352D8002CF7C4 /* MAProductShareViewController.m in Sources */,
 				BFC866C71BA35199002CF7C4 /* main.m in Sources */,
+				BFC867031BA352CE002CF7C4 /* MAProductDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,20 +282,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BFC866CE1BA35199002CF7C4 /* Main.storyboard */ = {
+		BFC866EC1BA3527C002CF7C4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BFC866CF1BA35199002CF7C4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		BFC866D31BA35199002CF7C4 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BFC866D41BA35199002CF7C4 /* Base */,
+				BFC866ED1BA3527C002CF7C4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BFC866EE1BA3527C002CF7C4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFC866EF1BA3527C002CF7C4 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -341,7 +387,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ProductViewer/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ProductViewer/res/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.marlonandrade.ProductViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -352,7 +398,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ProductViewer/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ProductViewer/res/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.marlonandrade.ProductViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
