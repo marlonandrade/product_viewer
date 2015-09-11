@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		BF93D2BB1BA3735800CE5B97 /* MAUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BF93D2BA1BA3735800CE5B97 /* MAUser.m */; };
+		BF93D2BD1BA3776800CE5B97 /* WebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF93D2BC1BA3776800CE5B97 /* WebImage.framework */; };
+		BF93D2C31BA37B0500CE5B97 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = BF93D2C21BA37B0500CE5B97 /* NSString+URLEncoding.m */; };
+		BF93D2C61BA37B5F00CE5B97 /* NSURL+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = BF93D2C51BA37B5F00CE5B97 /* NSURL+URLEncoding.m */; };
 		BFB40E581BA35FC50088433C /* MAProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB40E561BA35FC50088433C /* MAProductCell.m */; };
-		BFB40E591BA35FC50088433C /* MAProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFB40E571BA35FC50088433C /* MAProductCell.xib */; };
 		BFC866C71BA35199002CF7C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC866C61BA35199002CF7C4 /* main.m */; };
 		BFC866E01BA35199002CF7C4 /* ProductViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC866DF1BA35199002CF7C4 /* ProductViewerTests.m */; };
 		BFC866F61BA3527C002CF7C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFC866EB1BA3527C002CF7C4 /* Assets.xcassets */; };
@@ -36,9 +38,13 @@
 /* Begin PBXFileReference section */
 		BF93D2B91BA3735800CE5B97 /* MAUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAUser.h; sourceTree = "<group>"; };
 		BF93D2BA1BA3735800CE5B97 /* MAUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAUser.m; sourceTree = "<group>"; };
+		BF93D2BC1BA3776800CE5B97 /* WebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebImage.framework; path = Carthage/Build/iOS/WebImage.framework; sourceTree = "<group>"; };
+		BF93D2C11BA37B0500CE5B97 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
+		BF93D2C21BA37B0500CE5B97 /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoding.m"; sourceTree = "<group>"; };
+		BF93D2C41BA37B5F00CE5B97 /* NSURL+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+URLEncoding.h"; sourceTree = "<group>"; };
+		BF93D2C51BA37B5F00CE5B97 /* NSURL+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+URLEncoding.m"; sourceTree = "<group>"; };
 		BFB40E551BA35FC50088433C /* MAProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAProductCell.h; sourceTree = "<group>"; };
 		BFB40E561BA35FC50088433C /* MAProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAProductCell.m; sourceTree = "<group>"; };
-		BFB40E571BA35FC50088433C /* MAProductCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MAProductCell.xib; sourceTree = "<group>"; };
 		BFC866C21BA35199002CF7C4 /* ProductViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC866C61BA35199002CF7C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BFC866DB1BA35199002CF7C4 /* ProductViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProductViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF93D2BD1BA3776800CE5B97 /* WebImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,12 +87,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF93D2BE1BA3777F00CE5B97 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF93D2BC1BA3776800CE5B97 /* WebImage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF93D2C01BA37AC700CE5B97 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				BF93D2C11BA37B0500CE5B97 /* NSString+URLEncoding.h */,
+				BF93D2C21BA37B0500CE5B97 /* NSString+URLEncoding.m */,
+				BF93D2C41BA37B5F00CE5B97 /* NSURL+URLEncoding.h */,
+				BF93D2C51BA37B5F00CE5B97 /* NSURL+URLEncoding.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
 		BFB40E511BA35F700088433C /* view */ = {
 			isa = PBXGroup;
 			children = (
 				BFB40E551BA35FC50088433C /* MAProductCell.h */,
 				BFB40E561BA35FC50088433C /* MAProductCell.m */,
-				BFB40E571BA35FC50088433C /* MAProductCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -95,6 +120,7 @@
 			children = (
 				BFC866C41BA35199002CF7C4 /* ProductViewer */,
 				BFC866DE1BA35199002CF7C4 /* ProductViewerTests */,
+				BF93D2BE1BA3777F00CE5B97 /* Frameworks */,
 				BFC866C31BA35199002CF7C4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -151,6 +177,7 @@
 			children = (
 				BFC866F21BA3527C002CF7C4 /* AppDelegate.h */,
 				BFC866F31BA3527C002CF7C4 /* AppDelegate.m */,
+				BF93D2C01BA37AC700CE5B97 /* category */,
 				BFC866F41BA3527C002CF7C4 /* controller */,
 				BFC867071BA35969002CF7C4 /* datasource */,
 				BFC866F51BA3527C002CF7C4 /* model */,
@@ -203,6 +230,7 @@
 				BFC866BE1BA35199002CF7C4 /* Sources */,
 				BFC866BF1BA35199002CF7C4 /* Frameworks */,
 				BFC866C01BA35199002CF7C4 /* Resources */,
+				BF93D2BF1BA377A000CE5B97 /* Add Carthage Frameworks */,
 			);
 			buildRules = (
 			);
@@ -276,7 +304,6 @@
 				BFC866F81BA3527C002CF7C4 /* Main.storyboard in Resources */,
 				BFC866F61BA3527C002CF7C4 /* Assets.xcassets in Resources */,
 				BFC866F71BA3527C002CF7C4 /* LaunchScreen.storyboard in Resources */,
-				BFB40E591BA35FC50088433C /* MAProductCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,11 +316,30 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BF93D2BF1BA377A000CE5B97 /* Add Carthage Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/WebImage.framework",
+			);
+			name = "Add Carthage Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BFC866BE1BA35199002CF7C4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF93D2C31BA37B0500CE5B97 /* NSString+URLEncoding.m in Sources */,
 				BFC8670A1BA3597A002CF7C4 /* MAProductsDataSource.m in Sources */,
 				BFB40E581BA35FC50088433C /* MAProductCell.m in Sources */,
 				BFC866FA1BA3527C002CF7C4 /* AppDelegate.m in Sources */,
@@ -301,6 +347,7 @@
 				BFC8670D1BA35A02002CF7C4 /* MAProduct.m in Sources */,
 				BFC867061BA352D8002CF7C4 /* MAProductShareViewController.m in Sources */,
 				BFC866C71BA35199002CF7C4 /* main.m in Sources */,
+				BF93D2C61BA37B5F00CE5B97 /* NSURL+URLEncoding.m in Sources */,
 				BF93D2BB1BA3735800CE5B97 /* MAUser.m in Sources */,
 				BFC867031BA352CE002CF7C4 /* MAProductDetailViewController.m in Sources */,
 			);
@@ -430,6 +477,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/ProductViewer/res/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.marlonandrade.ProductViewer;
@@ -441,6 +492,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/ProductViewer/res/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.marlonandrade.ProductViewer;

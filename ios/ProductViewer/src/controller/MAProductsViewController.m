@@ -35,10 +35,6 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   
-  NSString *identifier = NSStringFromClass([MAProductCell class]);
-  [self.collectionView registerNib:[UINib nibWithNibName:identifier bundle:nil]
-        forCellWithReuseIdentifier:identifier];
-  
   [self.productsDataSource fetchProducts:^(NSArray *products) {
     self.products = products;
     [self.collectionView reloadData];

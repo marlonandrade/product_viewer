@@ -9,13 +9,18 @@
 #import "MAProductCell.h"
 
 #import "MAProduct.h"
+#import "NSURL+URLEncoding.h"
+
+@import WebImage;
 
 @implementation MAProductCell
 
 #pragma mark - Setter
 
 - (void)setProduct:(MAProduct *)product {
-  self.picture.image = nil;
+  NSURL *url = [NSURL ma_URLWithNonEncodedString:product.photoListUri];
+  [self.picture sd_setImageWithURL:url];
+  
   self.title.text = product.title;
   self.price.text = product.price;
 }
