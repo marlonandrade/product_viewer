@@ -9,12 +9,9 @@
 #import "MAProductCell.h"
 
 #import "MAProduct.h"
-
-@import WebImage;
+#import "UIImageView+WebImage.h"
 
 @interface MAProductCell ()
-
-- (void)_setImageWithURL:(NSURL*)url toImageView:(UIImageView*)imageView;
 
 @end
 
@@ -23,12 +20,11 @@
 #pragma mark - Setter
 
 - (void)setProduct:(MAProduct *)product {
-  [self _setImageWithURL:product.photoListURL toImageView:self.picture];
-  
+  [self.picture ma_setImageWithURL:product.photoListURL];
   self.title.text = product.title;
   self.price.text = product.price;
   
-  [self _setImageWithURL:product.user.avatarURL toImageView:self.userPicture];
+  [self.userPicture ma_setImageWithURL:product.user.avatarURL];
 }
 
 #pragma mark - View Lifecycle
@@ -38,21 +34,6 @@
   
   self.userPicture.layer.cornerRadius = CGRectGetWidth(self.userPicture.bounds) / 2;
   self.userPicture.clipsToBounds = YES;
-}
-
-#pragma mark - Private Interface
-
-- (void)_setImageWithURL:(NSURL *)url toImageView:(UIImageView *)imageView {
-  __block UIActivityIndicatorView *activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
-  activity.center = imageView.center;
-  activity.hidesWhenStopped = YES;
-  [activity startAnimating];
-  [imageView.superview addSubview:activity];
-  
-  [imageView sd_setImageWithURL:url
-                      completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-                        [activity removeFromSuperview];
-                      }];
 }
 
 @end

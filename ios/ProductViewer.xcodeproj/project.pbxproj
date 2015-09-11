@@ -14,6 +14,7 @@
 		BF93D2C91BA3840E00CE5B97 /* MAUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF93D2C81BA3840E00CE5B97 /* MAUserViewController.m */; };
 		BF93D2CD1BA3931900CE5B97 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF93D2CA1BA3898D00CE5B97 /* AFNetworking.framework */; };
 		BF93D2CF1BA3931C00CE5B97 /* Mantle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF93D2CE1BA3931C00CE5B97 /* Mantle.framework */; };
+		BF93D2D51BA3A1E300CE5B97 /* UIImageView+WebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BF93D2D41BA3A1E300CE5B97 /* UIImageView+WebImage.m */; };
 		BFB40E581BA35FC50088433C /* MAProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB40E561BA35FC50088433C /* MAProductCell.m */; };
 		BFC866C71BA35199002CF7C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC866C61BA35199002CF7C4 /* main.m */; };
 		BFC866E01BA35199002CF7C4 /* ProductViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC866DF1BA35199002CF7C4 /* ProductViewerTests.m */; };
@@ -50,6 +51,8 @@
 		BF93D2C81BA3840E00CE5B97 /* MAUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAUserViewController.m; sourceTree = "<group>"; };
 		BF93D2CA1BA3898D00CE5B97 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/iOS/AFNetworking.framework; sourceTree = "<group>"; };
 		BF93D2CE1BA3931C00CE5B97 /* Mantle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mantle.framework; path = Carthage/Build/iOS/Mantle.framework; sourceTree = "<group>"; };
+		BF93D2D31BA3A1E300CE5B97 /* UIImageView+WebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebImage.h"; sourceTree = "<group>"; };
+		BF93D2D41BA3A1E300CE5B97 /* UIImageView+WebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebImage.m"; sourceTree = "<group>"; };
 		BFB40E551BA35FC50088433C /* MAProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAProductCell.h; sourceTree = "<group>"; };
 		BFB40E561BA35FC50088433C /* MAProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAProductCell.m; sourceTree = "<group>"; };
 		BFC866C21BA35199002CF7C4 /* ProductViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +116,8 @@
 				BF93D2C21BA37B0500CE5B97 /* NSString+URLEncoding.m */,
 				BF93D2C41BA37B5F00CE5B97 /* NSURL+URLEncoding.h */,
 				BF93D2C51BA37B5F00CE5B97 /* NSURL+URLEncoding.m */,
+				BF93D2D31BA3A1E300CE5B97 /* UIImageView+WebImage.h */,
+				BF93D2D41BA3A1E300CE5B97 /* UIImageView+WebImage.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -357,6 +362,7 @@
 				BF93D2C31BA37B0500CE5B97 /* NSString+URLEncoding.m in Sources */,
 				BFC8670A1BA3597A002CF7C4 /* MAProductsDataSource.m in Sources */,
 				BFB40E581BA35FC50088433C /* MAProductCell.m in Sources */,
+				BF93D2D51BA3A1E300CE5B97 /* UIImageView+WebImage.m in Sources */,
 				BFC866FA1BA3527C002CF7C4 /* AppDelegate.m in Sources */,
 				BFC867001BA352AF002CF7C4 /* MAProductsViewController.m in Sources */,
 				BF93D2C91BA3840E00CE5B97 /* MAUserViewController.m in Sources */,
