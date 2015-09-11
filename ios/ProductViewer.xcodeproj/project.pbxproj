@@ -7,16 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF93D2BB1BA3735800CE5B97 /* MAUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BF93D2BA1BA3735800CE5B97 /* MAUser.m */; };
+		BFB40E581BA35FC50088433C /* MAProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB40E561BA35FC50088433C /* MAProductCell.m */; };
+		BFB40E591BA35FC50088433C /* MAProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFB40E571BA35FC50088433C /* MAProductCell.xib */; };
 		BFC866C71BA35199002CF7C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC866C61BA35199002CF7C4 /* main.m */; };
 		BFC866E01BA35199002CF7C4 /* ProductViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC866DF1BA35199002CF7C4 /* ProductViewerTests.m */; };
 		BFC866F61BA3527C002CF7C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFC866EB1BA3527C002CF7C4 /* Assets.xcassets */; };
 		BFC866F71BA3527C002CF7C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFC866EC1BA3527C002CF7C4 /* LaunchScreen.storyboard */; };
 		BFC866F81BA3527C002CF7C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFC866EE1BA3527C002CF7C4 /* Main.storyboard */; };
-		BFC866F91BA3527C002CF7C4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFC866F01BA3527C002CF7C4 /* Info.plist */; };
 		BFC866FA1BA3527C002CF7C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC866F31BA3527C002CF7C4 /* AppDelegate.m */; };
 		BFC867001BA352AF002CF7C4 /* MAProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC866FF1BA352AF002CF7C4 /* MAProductsViewController.m */; };
 		BFC867031BA352CE002CF7C4 /* MAProductDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC867021BA352CE002CF7C4 /* MAProductDetailViewController.m */; };
 		BFC867061BA352D8002CF7C4 /* MAProductShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC867051BA352D8002CF7C4 /* MAProductShareViewController.m */; };
+		BFC8670A1BA3597A002CF7C4 /* MAProductsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC867091BA3597A002CF7C4 /* MAProductsDataSource.m */; };
+		BFC8670D1BA35A02002CF7C4 /* MAProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC8670C1BA35A02002CF7C4 /* MAProduct.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +34,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF93D2B91BA3735800CE5B97 /* MAUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAUser.h; sourceTree = "<group>"; };
+		BF93D2BA1BA3735800CE5B97 /* MAUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAUser.m; sourceTree = "<group>"; };
+		BFB40E551BA35FC50088433C /* MAProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAProductCell.h; sourceTree = "<group>"; };
+		BFB40E561BA35FC50088433C /* MAProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAProductCell.m; sourceTree = "<group>"; };
+		BFB40E571BA35FC50088433C /* MAProductCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MAProductCell.xib; sourceTree = "<group>"; };
 		BFC866C21BA35199002CF7C4 /* ProductViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC866C61BA35199002CF7C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BFC866DB1BA35199002CF7C4 /* ProductViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProductViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +56,10 @@
 		BFC867021BA352CE002CF7C4 /* MAProductDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAProductDetailViewController.m; sourceTree = "<group>"; };
 		BFC867041BA352D8002CF7C4 /* MAProductShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAProductShareViewController.h; sourceTree = "<group>"; };
 		BFC867051BA352D8002CF7C4 /* MAProductShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAProductShareViewController.m; sourceTree = "<group>"; };
+		BFC867081BA3597A002CF7C4 /* MAProductsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAProductsDataSource.h; sourceTree = "<group>"; };
+		BFC867091BA3597A002CF7C4 /* MAProductsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAProductsDataSource.m; sourceTree = "<group>"; };
+		BFC8670B1BA35A02002CF7C4 /* MAProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAProduct.h; sourceTree = "<group>"; };
+		BFC8670C1BA35A02002CF7C4 /* MAProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAProduct.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +80,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BFB40E511BA35F700088433C /* view */ = {
+			isa = PBXGroup;
+			children = (
+				BFB40E551BA35FC50088433C /* MAProductCell.h */,
+				BFB40E561BA35FC50088433C /* MAProductCell.m */,
+				BFB40E571BA35FC50088433C /* MAProductCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		BFC866B91BA35199002CF7C4 = {
 			isa = PBXGroup;
 			children = (
@@ -129,7 +152,9 @@
 				BFC866F21BA3527C002CF7C4 /* AppDelegate.h */,
 				BFC866F31BA3527C002CF7C4 /* AppDelegate.m */,
 				BFC866F41BA3527C002CF7C4 /* controller */,
+				BFC867071BA35969002CF7C4 /* datasource */,
 				BFC866F51BA3527C002CF7C4 /* model */,
+				BFB40E511BA35F700088433C /* view */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -150,9 +175,23 @@
 		BFC866F51BA3527C002CF7C4 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				BFC8670B1BA35A02002CF7C4 /* MAProduct.h */,
+				BFC8670C1BA35A02002CF7C4 /* MAProduct.m */,
+				BF93D2B91BA3735800CE5B97 /* MAUser.h */,
+				BF93D2BA1BA3735800CE5B97 /* MAUser.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
+		};
+		BFC867071BA35969002CF7C4 /* datasource */ = {
+			isa = PBXGroup;
+			children = (
+				BFC867081BA3597A002CF7C4 /* MAProductsDataSource.h */,
+				BFC867091BA3597A002CF7C4 /* MAProductsDataSource.m */,
+			);
+			name = datasource;
+			path = ProductViewer/datasource;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -234,10 +273,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFC866F91BA3527C002CF7C4 /* Info.plist in Resources */,
 				BFC866F81BA3527C002CF7C4 /* Main.storyboard in Resources */,
 				BFC866F61BA3527C002CF7C4 /* Assets.xcassets in Resources */,
 				BFC866F71BA3527C002CF7C4 /* LaunchScreen.storyboard in Resources */,
+				BFB40E591BA35FC50088433C /* MAProductCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,10 +294,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFC8670A1BA3597A002CF7C4 /* MAProductsDataSource.m in Sources */,
+				BFB40E581BA35FC50088433C /* MAProductCell.m in Sources */,
 				BFC866FA1BA3527C002CF7C4 /* AppDelegate.m in Sources */,
 				BFC867001BA352AF002CF7C4 /* MAProductsViewController.m in Sources */,
+				BFC8670D1BA35A02002CF7C4 /* MAProduct.m in Sources */,
 				BFC867061BA352D8002CF7C4 /* MAProductShareViewController.m in Sources */,
 				BFC866C71BA35199002CF7C4 /* main.m in Sources */,
+				BF93D2BB1BA3735800CE5B97 /* MAUser.m in Sources */,
 				BFC867031BA352CE002CF7C4 /* MAProductDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,6 +491,7 @@
 				BFC866E61BA35199002CF7C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BFC866E71BA35199002CF7C4 /* Build configuration list for PBXNativeTarget "ProductViewerTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +500,7 @@
 				BFC866E91BA35199002CF7C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

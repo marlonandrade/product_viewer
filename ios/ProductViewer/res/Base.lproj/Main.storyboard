@@ -7,10 +7,15 @@
         <!--Navigation Controller-->
         <scene sceneID="sJH-1W-Ozd">
             <objects>
-                <navigationController id="FGm-DT-Rqy" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pqh-dn-pH7">
+                <navigationController storyboardIdentifier="Main Navigation" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FGm-DT-Rqy" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="pqh-dn-pH7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.96078431369999995" green="0.34901960780000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.28627450980392155" green="0.27450980392156865" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.96078431372549022" green="0.34901960784313724" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="beI-1k-Y4d" kind="relationship" relationship="rootViewController" id="DF9-Jg-V4H"/>
@@ -23,42 +28,26 @@
         <!--Products-->
         <scene sceneID="8Lj-Bk-0SA">
             <objects>
-                <collectionViewController title="Products" id="beI-1k-Y4d" customClass="MAProductsViewController" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="MAProductsViewController" title="Products" id="beI-1k-Y4d" customClass="MAProductsViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="U6b-dP-aKT">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.28627450980392155" green="0.27450980392156865" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aEL-O0-Ayf">
-                            <size key="itemSize" width="250" height="100"/>
+                        <color key="backgroundColor" red="0.40784313725490196" green="0.396078431372549" blue="0.3843137254901961" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3ZG-7Z-QAv">
+                            <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="cXO-ts-lw2">
-                                <rect key="frame" x="0.0" y="64" width="250" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="e5I-GO-lNV">
+                                <rect key="frame" x="10" y="10" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="250" height="100"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIb-xm-jIE">
-                                            <rect key="frame" x="104" y="39" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" red="1" green="0.73725490196078436" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="DIb-xm-jIE" firstAttribute="centerX" secondItem="cXO-ts-lw2" secondAttribute="centerX" id="08x-2p-Y7L"/>
-                                    <constraint firstItem="DIb-xm-jIE" firstAttribute="centerY" secondItem="cXO-ts-lw2" secondAttribute="centerY" id="65a-Ds-XBb"/>
-                                </constraints>
-                                <connections>
-                                    <segue destination="YKU-nS-Sgh" kind="show" id="Oju-Mf-JnA"/>
-                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -75,7 +64,7 @@
         <!--Share-->
         <scene sceneID="ZRC-jA-YgG">
             <objects>
-                <viewController title="Share" id="Z2Q-Bb-A1f" customClass="MAProductShareViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MAProductShareViewController" title="Share" id="Z2Q-Bb-A1f" customClass="MAProductShareViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Yni-tS-Qcw"/>
                         <viewControllerLayoutGuide type="bottom" id="tzw-Mi-8Mq"/>
@@ -91,7 +80,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.39215686274509803" green="0.38039215686274508" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P7I-zT-bwp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -101,7 +90,7 @@
         <!--Product Detail-->
         <scene sceneID="SnG-5X-FRY">
             <objects>
-                <viewController title="Product Detail" id="YKU-nS-Sgh" customClass="MAProductDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MAProductDetailViewController" title="Product Detail" id="YKU-nS-Sgh" customClass="MAProductDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kht-CK-Su1"/>
                         <viewControllerLayoutGuide type="bottom" id="ry4-Vs-nya"/>
@@ -118,7 +107,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.41568627450980394" green="0.40392156862745099" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sP6-y5-pHM" userLabel="First Responder" sceneMemberID="firstResponder"/>

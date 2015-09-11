@@ -8,31 +8,43 @@
 
 #import "MAProductsViewController.h"
 
-@interface MAProductsViewController ()
+#import "MAProductCell.h"
+
+#import "MAProductsDataSource.h"
+
+@interface MAProductsViewController () <UICollectionViewDelegateFlowLayout>
+
+@property (nonatomic, strong) NSArray *products;
+@property (nonatomic, strong) MAProductsDataSource *productsDataSource;
 
 @end
 
 @implementation MAProductsViewController
 
-static NSString * const reuseIdentifier = @"ProductCell";
+#pragma mark - Getter
+
+- (MAProductsDataSource *)productsDataSource {
+  if (!_productsDataSource) {
+    _productsDataSource = [[MAProductsDataSource alloc] init];
+  }
+  return _productsDataSource;
+}
+
+#pragma mark - UIViewController Methods
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-
-  NSLog(@"[%@] %@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
-
-  // Uncomment the following line to preserve selection between presentations
-  // self.clearsSelectionOnViewWillAppear = NO;
   
-  // Register cell classes
-  //[self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+  NSString *identifier = NSStringFromClass([MAProductCell class]);
+  [self.collectionView registerNib:[UINib nibWithNibName:identifier bundle:nil]
+        forCellWithReuseIdentifier:identifier];
   
-  // Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning {
-  [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
+  [self.productsDataSource fetchProducts:^(NSArray *products) {
+    self.products = products;
+    [self.collectionView reloadData];
+  } error:^(NSError *error) {
+    NSLog(@"Look at error");
+  }];
 }
 
 /*
@@ -54,20 +66,15 @@ static NSString * const reuseIdentifier = @"ProductCell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView
      numberOfItemsInSection:(NSInteger)section {
-  return 10;
+  return self.products.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
                   cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-  UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+  MAProductCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([MAProductCell class])
+                                                                  forIndexPath:indexPath];
   
-  NSLog(@"cellForItemAtIndexPath");
-  
-  NSLog(@"cell: %@", cell);
-  
-  
-  
-  // Configure the cell
+  cell.product = self.products[indexPath.row];
   
   return cell;
 }
@@ -102,5 +109,23 @@ return NO;
 
 }
 */
+
+#pragma mark - UICollectionViewDelegateFlowLayout
+
+int const ProductHeight = 238;
+int const ProductColumns = 2;
+
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout *)collectionViewLayout
+  sizeForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
+  
+  UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout *)collectionViewLayout;
+  
+  CGFloat width = CGRectGetWidth(collectionView.bounds) -
+      (flowLayout.minimumInteritemSpacing * (ProductColumns - 1)) -
+      (flowLayout.sectionInset.left + flowLayout.sectionInset.right);
+  
+  return CGSizeMake(width / ProductColumns, ProductHeight);
+}
 
 @end
