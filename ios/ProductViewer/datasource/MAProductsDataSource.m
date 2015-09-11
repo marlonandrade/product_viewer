@@ -11,36 +11,33 @@
 #import "MAProduct.h"
 #import "MAUser.h"
 
+@import AFNetworking;
+
+static NSString *const kProductsUri = @"https://gist.githubusercontent.com/caironoleto/15f71c091fb4725abc8a/raw/5bdca1c267b63c344d7b9d9c0f92ad8df9a38ecb/data.json";
+
 @implementation MAProductsDataSource
 
-- (void)fetchProducts:(MAProductsSuccessCallback)success
-                error:(MAProductsErrorCallback)error {
-  // do some requests
+- (void)fetchProducts:(MAProductsSuccessCallback)successCallback
+                error:(MAProductsErrorCallback)errorCallback {
+  AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+  manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
   
-  MAProduct *product = [[MAProduct alloc] init];
-  product.title = @"SIT ET";
-  product.price = @"$271.98";
-  product.photoDetailUri = @"http://placehold.it/320x370/e85657/ffffff/&text=SIT ET";
-  product.photoListUri = @"http://placehold.it/168x213/f77274/ffffff/&text=SIT ET";
-  
-  MAUser *user = [[MAUser alloc] init];
-  user.avatarUri = @"http://placehold.it/32/4597CE/F7E42D/&text=FS";
-  user.initials = @"FS";
-  user.fullName = @"Frank Simpson";
-  
-  product.user = user;
-  
-  NSArray *products = @[
-    product,
-    product,
-    product,
-    product,
-    product,
-    product,
-    product
-  ];
-  
-  success(products);
+  [manager GET:kProductsUri
+    parameters:nil
+       success:^(AFHTTPRequestOperation *operation, NSArray* responseObjects) {
+         NSError *error;
+         NSArray* products = [MTLJSONAdapter modelsOfClass:[MAProduct class]
+                                             fromJSONArray:responseObjects
+                                                     error:&error];
+         if (error) {
+           NSLog(@"Error: %@", error);
+         }
+         
+         successCallback(products);
+       } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+         NSLog(@"ERROR %@", error);
+         errorCallback(error);
+       }];
 }
 
 @end

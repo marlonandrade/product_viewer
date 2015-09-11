@@ -1,1 +1,3 @@
 github "rs/SDWebImage"
+github "Automatic/AFNetworking"
+github "Mantle/Mantle"

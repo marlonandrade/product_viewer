@@ -12,6 +12,8 @@
 		BF93D2C31BA37B0500CE5B97 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = BF93D2C21BA37B0500CE5B97 /* NSString+URLEncoding.m */; };
 		BF93D2C61BA37B5F00CE5B97 /* NSURL+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = BF93D2C51BA37B5F00CE5B97 /* NSURL+URLEncoding.m */; };
 		BF93D2C91BA3840E00CE5B97 /* MAUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF93D2C81BA3840E00CE5B97 /* MAUserViewController.m */; };
+		BF93D2CD1BA3931900CE5B97 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF93D2CA1BA3898D00CE5B97 /* AFNetworking.framework */; };
+		BF93D2CF1BA3931C00CE5B97 /* Mantle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF93D2CE1BA3931C00CE5B97 /* Mantle.framework */; };
 		BFB40E581BA35FC50088433C /* MAProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB40E561BA35FC50088433C /* MAProductCell.m */; };
 		BFC866C71BA35199002CF7C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC866C61BA35199002CF7C4 /* main.m */; };
 		BFC866E01BA35199002CF7C4 /* ProductViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC866DF1BA35199002CF7C4 /* ProductViewerTests.m */; };
@@ -46,6 +48,8 @@
 		BF93D2C51BA37B5F00CE5B97 /* NSURL+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+URLEncoding.m"; sourceTree = "<group>"; };
 		BF93D2C71BA3840E00CE5B97 /* MAUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAUserViewController.h; sourceTree = "<group>"; };
 		BF93D2C81BA3840E00CE5B97 /* MAUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAUserViewController.m; sourceTree = "<group>"; };
+		BF93D2CA1BA3898D00CE5B97 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/iOS/AFNetworking.framework; sourceTree = "<group>"; };
+		BF93D2CE1BA3931C00CE5B97 /* Mantle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mantle.framework; path = Carthage/Build/iOS/Mantle.framework; sourceTree = "<group>"; };
 		BFB40E551BA35FC50088433C /* MAProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAProductCell.h; sourceTree = "<group>"; };
 		BFB40E561BA35FC50088433C /* MAProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAProductCell.m; sourceTree = "<group>"; };
 		BFC866C21BA35199002CF7C4 /* ProductViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +81,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF93D2BD1BA3776800CE5B97 /* WebImage.framework in Frameworks */,
+				BF93D2CD1BA3931900CE5B97 /* AFNetworking.framework in Frameworks */,
+				BF93D2CF1BA3931C00CE5B97 /* Mantle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +99,8 @@
 		BF93D2BE1BA3777F00CE5B97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF93D2CE1BA3931C00CE5B97 /* Mantle.framework */,
+				BF93D2CA1BA3898D00CE5B97 /* AFNetworking.framework */,
 				BF93D2BC1BA3776800CE5B97 /* WebImage.framework */,
 			);
 			name = Frameworks;
@@ -329,6 +337,8 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/WebImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AFNetworking.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Mantle.framework",
 			);
 			name = "Add Carthage Frameworks";
 			outputPaths = (

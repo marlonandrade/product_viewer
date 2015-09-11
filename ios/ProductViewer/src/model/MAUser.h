@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MAUser : NSObject
+@import Mantle;
 
-@property (nonatomic, strong) NSString *avatarUri;
-@property (nonatomic, strong) NSString *initials;
-@property (nonatomic, strong) NSString *fullName;
+@interface MAUser : MTLModel <MTLJSONSerializing>
+
+@property (nonatomic, copy, readonly) NSURL *avatarURL;
+@property (nonatomic, copy) NSString *initials;
+@property (nonatomic, copy) NSString *fullName;
 
 @end

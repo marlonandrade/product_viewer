@@ -1,0 +1,8 @@
+[submodule "Carthage/Checkouts/AFNetworking"]
+  path = ios/Carthage/Checkouts/AFNetworking
+  url = https://github.com/Automatic/AFNetworking.git
+  ignore = dirty
+[submodule "Carthage/Checkouts/SDWebImage"]
+  path = ios/Carthage/Checkouts/SDWebImage
+  url = https://github.com/rs/SDWebImage.git
+  ignore = dirty

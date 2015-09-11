@@ -13,7 +13,7 @@ typedef void (^MAProductsErrorCallback)(NSError* error);
 
 @interface MAProductsDataSource : NSObject
 
-- (void)fetchProducts:(MAProductsSuccessCallback)success
-                error:(MAProductsErrorCallback)error;
+- (void)fetchProducts:(MAProductsSuccessCallback)successCallback
+                error:(MAProductsErrorCallback)errorCallback;
 
 @end

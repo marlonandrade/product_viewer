@@ -8,6 +8,24 @@
 
 #import "MAUser.h"
 
+#import "NSURL+URLEncoding.h"
+
 @implementation MAUser
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+  return @{
+    @"avatarURL": @"user_avatar",
+    @"initials": @"user_iniciais",
+    @"fullName": @"user_fullname"
+  };
+}
+
++ (NSValueTransformer *)avatarURLJSONTransformer {
+  return [MTLValueTransformer transformerUsingForwardBlock:^id(NSString *stringUri, BOOL *success, NSError *__autoreleasing *error) {
+    return [NSURL ma_URLWithNonEncodedString:stringUri];
+  } reverseBlock:^id(NSURL* url, BOOL *success, NSError *__autoreleasing *error) {
+    return url.absoluteString;
+  }];
+}
 
 @end
