@@ -31,7 +31,7 @@
                             </mask>
                         </variation>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRODUCT NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJ9-hh-WuY">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRODUCT TITLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJ9-hh-WuY">
                         <rect key="frame" x="8" y="160" width="129" height="16"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -112,11 +112,11 @@
                 </mask>
             </variation>
             <connections>
-                <outlet property="image" destination="jD2-I8-iOB" id="UfP-nK-te9"/>
-                <outlet property="name" destination="fJ9-hh-WuY" id="GhJ-vk-jq9"/>
+                <outlet property="picture" destination="jD2-I8-iOB" id="Jlf-mN-wK2"/>
                 <outlet property="price" destination="hJU-VL-6YJ" id="b1E-ib-5ml"/>
+                <outlet property="title" destination="fJ9-hh-WuY" id="wjo-eO-ECr"/>
             </connections>
-            <point key="canvasLocation" x="936.5" y="343.5"/>
+            <point key="canvasLocation" x="993.5" y="346"/>
         </collectionViewCell>
     </objects>
 </document>

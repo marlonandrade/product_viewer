@@ -15,7 +15,9 @@
 #pragma mark - Setter
 
 - (void)setProduct:(MAProduct *)product {
-  // adjust myself
+  self.picture.image = nil;
+  self.title.text = product.title;
+  self.price.text = product.price;
 }
 
 @end
