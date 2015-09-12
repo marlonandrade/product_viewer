@@ -9,7 +9,6 @@
 #import "MAProductsViewController.h"
 
 #import "MAProductCell.h"
-
 #import "MAProductsDataSource.h"
 
 @interface MAProductsViewController () <UICollectionViewDelegateFlowLayout>
@@ -60,12 +59,11 @@
 }
 */
 
-#pragma mark <UICollectionViewDataSource>
+#pragma mark - UICollectionViewDataSource
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
   return 1;
 }
-
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView
      numberOfItemsInSection:(NSInteger)section {
@@ -82,41 +80,10 @@
   return cell;
 }
 
-#pragma mark <UICollectionViewDelegate>
-
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-return YES;
-}
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-  return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-
-}
-*/
-
 #pragma mark - UICollectionViewDelegateFlowLayout
 
-int const ProductHeight = 260;
-int const ProductColumns = 2;
+int const kProductHeight = 260;
+int const kProductColumns = 2;
 
 - (CGSize)collectionView:(UICollectionView *)collectionView
                   layout:(UICollectionViewLayout *)collectionViewLayout
@@ -125,10 +92,10 @@ int const ProductColumns = 2;
   UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout *)collectionViewLayout;
   
   CGFloat width = CGRectGetWidth(collectionView.bounds) -
-      (flowLayout.minimumInteritemSpacing * (ProductColumns - 1)) -
+      (flowLayout.minimumInteritemSpacing * (kProductColumns - 1)) -
       (flowLayout.sectionInset.left + flowLayout.sectionInset.right);
   
-  return CGSizeMake(width / ProductColumns, ProductHeight);
+  return CGSizeMake(width / kProductColumns, kProductHeight);
 }
 
 @end
