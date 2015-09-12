@@ -8,6 +8,10 @@
 
 #import "MAProductDetailViewController.h"
 
+#import "UIImageView+WebImage.h"
+#import "UIView+Bordered.h"
+#import "UIView+Rounded.h"
+
 @interface MAProductDetailViewController ()
 
 @end
@@ -16,14 +20,24 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  // Do any additional setup after loading the view.
-
-NSLog(@"[%@] %@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
-}
-
-- (void)didReceiveMemoryWarning {
-  [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
+  
+  UIColor *borderColor = [UIColor colorWithRed:232.f/255.f
+                                         green:231.f/255.f
+                                          blue:231.f/255.f
+                                         alpha:1.f];
+  CGFloat borderWidth = 1.f;
+  
+  [self.userPictureRoundedContainer ma_makeRounded];
+  [self.userPictureRoundedContainer ma_addBorderWithColor:borderColor
+                                                    width:borderWidth];
+  
+  [self.likeRoundedContainer ma_makeRounded];
+  [self.likeRoundedContainer ma_addBorderWithColor:borderColor
+                                             width:borderWidth];
+  
+  [self.photoImageView ma_setImageWithURL:self.product.photoDetailURL];
+  self.priceLabel.text = self.product.price;
+  [self.userPictureImageView ma_setImageWithURL:self.product.user.avatarURL];
 }
 
 /*

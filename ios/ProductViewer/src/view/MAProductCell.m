@@ -12,6 +12,7 @@
 #import "MAProduct.h"
 #import "MASession.h"
 #import "UIImageView+WebImage.h"
+#import "UIView+Rounded.h"
 
 @interface MAProductCell ()
 
@@ -43,8 +44,7 @@
 - (void)awakeFromNib {
   [super awakeFromNib];
   
-  self.userPicture.layer.cornerRadius = CGRectGetWidth(self.userPicture.bounds) / 2;
-  self.userPicture.clipsToBounds = YES;
+  [self.userPicture ma_makeRounded];
 }
 
 #pragma mark - IBActions

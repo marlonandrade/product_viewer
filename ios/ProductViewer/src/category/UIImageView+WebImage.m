@@ -14,13 +14,33 @@
 
 - (void)ma_setImageWithURL:(NSURL *)url {
   __block UIActivityIndicatorView *activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-  activity.center = self.center;
   activity.hidesWhenStopped = YES;
+  activity.translatesAutoresizingMaskIntoConstraints = NO;
   [activity startAnimating];
-  [self.superview addSubview:activity];
+  
+  [self addSubview:activity];
+  
+  __block NSArray *constraints = @[
+    [NSLayoutConstraint constraintWithItem:activity
+                                 attribute:NSLayoutAttributeCenterX
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:self
+                                 attribute:NSLayoutAttributeCenterX
+                                multiplier:1.f
+                                  constant:0],
+    [NSLayoutConstraint constraintWithItem:activity
+                                 attribute:NSLayoutAttributeCenterY
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:self
+                                 attribute:NSLayoutAttributeCenterY
+                                multiplier:1.f
+                                  constant:0]
+  ];
+  [self addConstraints:constraints];
   
   [self sd_setImageWithURL:url
                  completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                   [self removeConstraints:constraints];
                    [activity removeFromSuperview];
                  }];
 }

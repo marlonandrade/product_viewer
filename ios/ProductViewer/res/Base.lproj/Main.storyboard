@@ -8,6 +8,7 @@
     <customFonts key="customFonts">
         <mutableArray key="HelveticaNeue.ttc">
             <string>HelveticaNeue-Bold</string>
+            <string>HelveticaNeue-Medium</string>
             <string>HelveticaNeue-Bold</string>
         </mutableArray>
         <mutableArray key="HelveticaNeueLights.ttc">
@@ -292,6 +293,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VgZ-XI-qJN" userLabel="product_photo">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="352"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P7u-dA-48q">
                                 <rect key="frame" x="20" y="336" width="32" height="32"/>
@@ -323,6 +325,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="pOG-U0-nCa" firstAttribute="centerY" secondItem="CrV-sh-tmH" secondAttribute="centerY" id="CRA-UH-wl2"/>
                                     <constraint firstAttribute="width" constant="32" id="P5M-C4-g6G"/>
@@ -414,6 +417,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="likeRoundedContainer" destination="CrV-sh-tmH" id="PR7-4B-Otx"/>
+                        <outlet property="photoImageView" destination="VgZ-XI-qJN" id="jK8-Fe-MvR"/>
+                        <outlet property="priceLabel" destination="NjY-sd-rrb" id="lmF-Zd-sB5"/>
+                        <outlet property="userPictureImageView" destination="PjR-4F-uC1" id="y75-Uv-yvg"/>
+                        <outlet property="userPictureRoundedContainer" destination="P7u-dA-48q" id="1Jm-lQ-4mK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sP6-y5-pHM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

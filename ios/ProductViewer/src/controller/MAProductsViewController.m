@@ -11,6 +11,7 @@
 #import "MAProduct.h"
 #import "MASession.h"
 #import "MAProductCell.h"
+#import "MAProductDetailViewController.h"
 #import "MAProductsDataSource.h"
 
 @interface MAProductsViewController () <UICollectionViewDelegateFlowLayout, MAProductCellLikeDelegate>
@@ -51,15 +52,17 @@
   }];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-  // Get the new view controller using [segue destinationViewController].
-  // Pass the selected object to the new view controller.
+  if ([segue.destinationViewController isKindOfClass:[MAProductDetailViewController class]]) {
+    MAProductDetailViewController *detailViewController = (MAProductDetailViewController *)segue.destinationViewController;
+    MAProductCell *cell = (MAProductCell *)sender;
+    
+    NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
+    MAProduct *product = self.products[indexPath.row];
+    
+    detailViewController.product = product;
+  }
 }
-*/
 
 #pragma mark - UICollectionViewDataSource
 
