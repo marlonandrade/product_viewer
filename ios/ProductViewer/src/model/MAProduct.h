@@ -14,6 +14,7 @@
 
 @interface MAProduct : MTLModel <MTLJSONSerializing>
 
+@property (nonatomic, copy) NSString *uuid;
 @property (nonatomic, copy, readonly) NSURL *photoDetailURL;
 @property (nonatomic, copy, readonly) NSURL *photoListURL;
 @property (nonatomic, copy) NSString *title;

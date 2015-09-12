@@ -14,6 +14,7 @@
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
   return @{
+    @"uuid": @"_id",
     @"photoDetailURL": @"product_photo_on_detail",
     @"photoListURL": @"product_photo_on_list",
     @"title": @"product_title",
