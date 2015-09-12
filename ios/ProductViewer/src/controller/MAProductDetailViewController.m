@@ -8,6 +8,7 @@
 
 #import "MAProductDetailViewController.h"
 
+#import "MAProductShareViewController.h"
 #import "MASession.h"
 #import "MASeeButton.h"
 #import "UIImageView+WebImage.h"
@@ -41,20 +42,20 @@
   [self.photoImageView ma_setImageWithURL:self.product.photoDetailURL];
   self.priceLabel.text = self.product.price;
   [self.userPictureImageView ma_setImageWithURL:self.product.user.avatarURL];
-  [self.likeIconImageView setImageForProduct:self.product];
   [self.seeButton adjustForProduct:self.product];
 }
 
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-  // Get the new view controller using [segue destinationViewController].
-  // Pass the selected object to the new view controller.
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+  [self.likeIconImageView setImageForProduct:self.product];
 }
-*/
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  if ([segue.destinationViewController isKindOfClass:[MAProductShareViewController class]]) {
+    MAProductShareViewController *shareViewController = (MAProductShareViewController *)segue.destinationViewController;
+    shareViewController.product = self.product;
+  }
+}
 
 #pragma mark - IBActions
 

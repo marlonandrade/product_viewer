@@ -8,7 +8,15 @@
 
 #import "MAProductShareViewController.h"
 
+#import "MASession.h"
+#import "UIImageView+WebImage.h"
+#import "UIView+Rounded.h"
+#import "NSString+URLEncoding.h"
+
 @interface MAProductShareViewController ()
+
+- (NSString *)_shareText;
+- (void)_openUrl:(NSString *)urlString;
 
 @end
 
@@ -16,24 +24,53 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  // Do any additional setup after loading the view.
-
-  NSLog(@"[%@] %@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
+  
+  [self.userPictureImageView ma_makeRounded];
+  
+  [self.pictureImageView ma_setImageWithURL:self.product.photoListURL];
+  self.titleLabel.text = self.product.title;
+  self.priceLabel.text = self.product.price;
+  
+  [self.userPictureImageView ma_setImageWithURL:self.product.user.avatarURL];
+  
+  self.likeCountLabel.text = [self.product.likeCount stringValue];
+  [self.likeIconImageView setImageForProduct:self.product];
 }
 
-- (void)didReceiveMemoryWarning {
-  [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
+#pragma mark - IBActions
+
+- (IBAction)toggleLike:(id)sender {
+  [self.product toggleLikedWith:[MASession currentSession].user
+                        success:^(MAProduct *product) {
+                          [self.likeIconImageView setImageForProduct:product];
+                        } error:^(NSError *error) {
+                          NSLog(@"Error: %@", error);
+                        }];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-  // Get the new view controller using [segue destinationViewController].
-  // Pass the selected object to the new view controller.
+- (IBAction)shareWhatsapp:(id)sender {
+  NSString *textEscaped = [self _shareText];
+  NSString *url = [NSString stringWithFormat:@"whatsapp://send?text=%@", textEscaped];
+  [self _openUrl:url];
 }
-*/
+
+- (IBAction)shareSMS:(id)sender {
+  NSString *textEscaped = [self _shareText];
+  NSString *url = [NSString stringWithFormat:@"sms:?body=%@", textEscaped];
+  [self _openUrl:url];
+}
+
+#pragma mark - Private Interface
+
+- (NSString *)_shareText {
+  return [@"Hey check this product at Enjoei :P" ma_urlEncode];
+}
+
+- (void)_openUrl:(NSString *)urlString {
+  NSURL *url = [NSURL URLWithString:urlString];
+  if ([[UIApplication sharedApplication] canOpenURL:url]) {
+    [[UIApplication sharedApplication] openURL:url];
+  }
+}
 
 @end

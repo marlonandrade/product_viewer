@@ -8,9 +8,7 @@
 
 #import "MAProductCell.h"
 
-#import "MALike.h"
 #import "MAProduct.h"
-#import "MASession.h"
 #import "UIImageView+WebImage.h"
 #import "UIView+Rounded.h"
 

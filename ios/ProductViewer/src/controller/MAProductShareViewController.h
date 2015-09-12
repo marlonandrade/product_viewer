@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+#import "MALikeImageView.h"
+#import "MAProduct.h"
+
 @interface MAProductShareViewController : UIViewController
+
+@property (nonatomic, strong) MAProduct* product;
+
+@property (weak, nonatomic) IBOutlet UIImageView *pictureImageView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *userPictureImageView;
+@property (weak, nonatomic) IBOutlet UILabel *likeCountLabel;
+@property (weak, nonatomic) IBOutlet MALikeImageView *likeIconImageView;
 
 @end
