@@ -116,12 +116,12 @@ int const kProductColumns = 2;
 - (void)productCellToggleLike:(MAProductCell *)cell {
   NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
   MAProduct *product = self.products[indexPath.row];
-  [product toggleLikeWith:[MASession currentSession].user
-                  success:^(MAProduct *product) {
-                    [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
-                  } error:^(NSError *error) {
-                    NSLog(@"Error: %@", error);
-                  }];
+  [product toggleLikedWith:[MASession currentSession].user
+                   success:^(MAProduct *product) {
+                     [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
+                   } error:^(NSError *error) {
+                     NSLog(@"Error: %@", error);
+                   }];
 }
 
 @end

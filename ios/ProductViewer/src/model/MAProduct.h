@@ -17,6 +17,9 @@
 typedef void (^MALikeSuccessCallback)(MAProduct *product);
 typedef void (^MALikeErrorCallback)(NSError *error);
 
+typedef void (^MASeeSuccessCallback)(MAProduct *product);
+typedef void (^MASeeErrorCallback)(NSError *error);
+
 @interface MAProduct : MTLModel <MTLJSONSerializing>
 
 @property (nonatomic, copy) NSString *uuid;
@@ -29,8 +32,13 @@ typedef void (^MALikeErrorCallback)(NSError *error);
 
 - (NSNumber *)likeCount;
 - (BOOL)isLikedBy:(MAUser *)user;
-- (void)toggleLikeWith:(MAUser *)user
-               success:(MALikeSuccessCallback)successCallback
-                 error:(MALikeErrorCallback)errorCallback;
+- (void)toggleLikedWith:(MAUser *)user
+                success:(MALikeSuccessCallback)successCallback
+                  error:(MALikeErrorCallback)errorCallback;
+
+- (BOOL)isSeenBy:(MAUser *)user;
+- (void)toogleSeenWith:(MAUser *)user
+               success:(MASeeSuccessCallback)successCallback
+                 error:(MASeeErrorCallback)errorCallback;
 
 @end

@@ -10,6 +10,7 @@
             <string>HelveticaNeue-Bold</string>
             <string>HelveticaNeue-Bold</string>
             <string>HelveticaNeue-Medium</string>
+            <string>HelveticaNeue-Medium</string>
         </mutableArray>
         <mutableArray key="HelveticaNeueLights.ttc">
             <string>HelveticaNeue-Light</string>
@@ -396,15 +397,23 @@
                                 <color key="textColor" red="0.49019607843137253" green="0.47843137254901957" blue="0.46666666666666667" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w22-Fr-J4W">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w22-Fr-J4W" customClass="MASeeButton">
                                 <rect key="frame" x="20" y="442" width="560" height="40"/>
                                 <color key="backgroundColor" red="0.96862745098039216" green="0.44705882352941173" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Rdk-UF-h46"/>
                                 </constraints>
-                                <state key="normal" title="Button">
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="contentEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
+                                <state key="normal" title="VISTO" image="icon_seen_ok">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.96078431369999995" green="0.34901960780000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="toogleSee:" destination="YKU-nS-Sgh" eventType="touchUpInside" id="WSJ-5z-LKS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -443,6 +452,7 @@
                         <outlet property="likeRoundedContainer" destination="CrV-sh-tmH" id="PR7-4B-Otx"/>
                         <outlet property="photoImageView" destination="VgZ-XI-qJN" id="jK8-Fe-MvR"/>
                         <outlet property="priceLabel" destination="NjY-sd-rrb" id="lmF-Zd-sB5"/>
+                        <outlet property="seeButton" destination="w22-Fr-J4W" id="L6V-LI-a1j"/>
                         <outlet property="userPictureImageView" destination="PjR-4F-uC1" id="y75-Uv-yvg"/>
                         <outlet property="userPictureRoundedContainer" destination="P7u-dA-48q" id="1Jm-lQ-4mK"/>
                     </connections>
@@ -476,6 +486,7 @@
     <resources>
         <image name="hamburguer_icon" width="20" height="15"/>
         <image name="icon_like" width="17" height="19"/>
+        <image name="icon_seen_ok" width="24" height="24"/>
         <image name="user_icon" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>

@@ -19,7 +19,15 @@
     likeImage = [likeImage stringByAppendingString:@"_selected"];
   }
   
-  self.image = [UIImage imageNamed:likeImage];
+  [UIView animateWithDuration:0.15f animations:^{
+    self.alpha = 0.5f;
+  } completion:^(BOOL finished) {
+    self.image = [UIImage imageNamed:likeImage];
+    
+    [UIView animateWithDuration:0.15f animations:^{
+      self.alpha = 1.f;
+    }];
+  }];
 }
 
 @end

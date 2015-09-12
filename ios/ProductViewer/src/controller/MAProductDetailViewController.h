@@ -10,6 +10,7 @@
 
 #import "MALikeImageView.h"
 #import "MAProduct.h"
+#import "MASeeButton.h"
 
 @interface MAProductDetailViewController : UIViewController
 
@@ -21,5 +22,6 @@
 @property (weak, nonatomic) IBOutlet UIView *likeRoundedContainer;
 @property (weak, nonatomic) IBOutlet MALikeImageView *likeIconImageView;
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+@property (weak, nonatomic) IBOutlet MASeeButton *seeButton;
 
 @end

@@ -9,6 +9,7 @@
 #import "MAProductDetailViewController.h"
 
 #import "MASession.h"
+#import "MASeeButton.h"
 #import "UIImageView+WebImage.h"
 #import "UIView+Bordered.h"
 #import "UIView+Rounded.h"
@@ -40,6 +41,7 @@
   self.priceLabel.text = self.product.price;
   [self.userPictureImageView ma_setImageWithURL:self.product.user.avatarURL];
   [self.likeIconImageView setImageForProduct:self.product];
+  [self.seeButton adjustForProduct:self.product];
 }
 
 
@@ -56,9 +58,18 @@
 #pragma mark - IBActions
 
 - (IBAction)toggleLike:(id)sender {
-  [self.product toggleLikeWith:[MASession currentSession].user
+  [self.product toggleLikedWith:[MASession currentSession].user
+                        success:^(MAProduct *product) {
+                          [self.likeIconImageView setImageForProduct:product];
+                        } error:^(NSError *error) {
+                          NSLog(@"Error: %@", error);
+                        }];
+}
+
+- (IBAction)toogleSee:(id)sender {
+  [self.product toogleSeenWith:[MASession currentSession].user
                        success:^(MAProduct *product) {
-                         [self.likeIconImageView setImageForProduct:product];
+                         [self.seeButton adjustForProduct:product];
                        } error:^(NSError *error) {
                          NSLog(@"Error: %@", error);
                        }];

@@ -25,6 +25,8 @@
 		BFB373791BA4863000CA8F79 /* UIView+Rounded.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB373781BA4863000CA8F79 /* UIView+Rounded.m */; };
 		BFB3737C1BA486B500CA8F79 /* UIView+Bordered.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB3737B1BA486B500CA8F79 /* UIView+Bordered.m */; };
 		BFB3737F1BA48F4300CA8F79 /* MALikeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB3737E1BA48F4300CA8F79 /* MALikeImageView.m */; };
+		BFB373871BA4924000CA8F79 /* MASee.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB373861BA4924000CA8F79 /* MASee.m */; };
+		BFB3738A1BA4964800CA8F79 /* MASeeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB373891BA4964800CA8F79 /* MASeeButton.m */; };
 		BFB40E581BA35FC50088433C /* MAProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB40E561BA35FC50088433C /* MAProductCell.m */; };
 		BFC866C71BA35199002CF7C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC866C61BA35199002CF7C4 /* main.m */; };
 		BFC866E01BA35199002CF7C4 /* ProductViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC866DF1BA35199002CF7C4 /* ProductViewerTests.m */; };
@@ -83,6 +85,11 @@
 		BFB3737B1BA486B500CA8F79 /* UIView+Bordered.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Bordered.m"; sourceTree = "<group>"; };
 		BFB3737D1BA48F4300CA8F79 /* MALikeImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MALikeImageView.h; sourceTree = "<group>"; };
 		BFB3737E1BA48F4300CA8F79 /* MALikeImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MALikeImageView.m; sourceTree = "<group>"; };
+		BFB373841BA4924000CA8F79 /* MASee+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASee+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BFB373851BA4924000CA8F79 /* MASee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASee.h; sourceTree = "<group>"; };
+		BFB373861BA4924000CA8F79 /* MASee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASee.m; sourceTree = "<group>"; };
+		BFB373881BA4964800CA8F79 /* MASeeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASeeButton.h; sourceTree = "<group>"; };
+		BFB373891BA4964800CA8F79 /* MASeeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASeeButton.m; sourceTree = "<group>"; };
 		BFB40E551BA35FC50088433C /* MAProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAProductCell.h; sourceTree = "<group>"; };
 		BFB40E561BA35FC50088433C /* MAProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAProductCell.m; sourceTree = "<group>"; };
 		BFC866C21BA35199002CF7C4 /* ProductViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +183,8 @@
 				BF93D2D71BA3AE7C00CE5B97 /* MANavigationBar.m */,
 				BFB3737D1BA48F4300CA8F79 /* MALikeImageView.h */,
 				BFB3737E1BA48F4300CA8F79 /* MALikeImageView.m */,
+				BFB373881BA4964800CA8F79 /* MASeeButton.h */,
+				BFB373891BA4964800CA8F79 /* MASeeButton.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -279,6 +288,9 @@
 				BF93D2E51BA45FCD00CE5B97 /* MALike.m */,
 				BFC8670B1BA35A02002CF7C4 /* MAProduct.h */,
 				BFC8670C1BA35A02002CF7C4 /* MAProduct.m */,
+				BFB373841BA4924000CA8F79 /* MASee+CoreDataProperties.h */,
+				BFB373851BA4924000CA8F79 /* MASee.h */,
+				BFB373861BA4924000CA8F79 /* MASee.m */,
 				BF93D2EB1BA475CF00CE5B97 /* MASession.h */,
 				BF93D2EC1BA475CF00CE5B97 /* MASession.m */,
 				BF93D2B91BA3735800CE5B97 /* MAUser.h */,
@@ -426,9 +438,11 @@
 				BF93D2D81BA3AE7C00CE5B97 /* MANavigationBar.m in Sources */,
 				BF93D2D51BA3A1E300CE5B97 /* UIImageView+WebImage.m in Sources */,
 				BF93D2EA1BA4604F00CE5B97 /* MADataSeed.m in Sources */,
+				BFB3738A1BA4964800CA8F79 /* MASeeButton.m in Sources */,
 				BFB3737F1BA48F4300CA8F79 /* MALikeImageView.m in Sources */,
 				BF93D2E11BA45F3800CE5B97 /* ProductViewer.xcdatamodeld in Sources */,
 				BFC866FA1BA3527C002CF7C4 /* AppDelegate.m in Sources */,
+				BFB373871BA4924000CA8F79 /* MASee.m in Sources */,
 				BF93D2DB1BA454F900CE5B97 /* MASessionViewController.m in Sources */,
 				BFC867001BA352AF002CF7C4 /* MAProductsViewController.m in Sources */,
 				BF93D2C91BA3840E00CE5B97 /* MAUserViewController.m in Sources */,

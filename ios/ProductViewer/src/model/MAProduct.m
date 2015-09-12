@@ -10,6 +10,7 @@
 
 #import "MALike.h"
 #import "MAUser.h"
+#import "MASee.h"
 #import "NSURL+URLEncoding.h"
 
 @interface MAProduct ()
@@ -33,9 +34,9 @@
   return ![[MALike MR_numberOfEntitiesWithPredicate:predicate] isEqual:@0];
 }
 
-- (void)toggleLikeWith:(MAUser *)user
-               success:(MALikeSuccessCallback)successCallback
-                 error:(MALikeErrorCallback)errorCallback {
+- (void)toggleLikedWith:(MAUser *)user
+                success:(MALikeSuccessCallback)successCallback
+                  error:(MALikeErrorCallback)errorCallback {
   [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
     if ([self isLikedBy:user]) {
       NSPredicate *predicate = [self _predicateWithProductAndUser:user];
@@ -45,6 +46,33 @@
       MALike *like = [MALike MR_createEntityInContext:localContext];
       like.product_uuid = self.uuid;
       like.user_uuid = user.uuid;
+    }
+  } completion:^(BOOL contextDidSave, NSError *error) {
+    if (error) {
+      errorCallback(error);
+    } else {
+      successCallback(self);
+    }
+  }];
+}
+
+- (BOOL)isSeenBy:(MAUser *)user {
+  NSPredicate *predicate = [self _predicateWithProductAndUser:user];
+  return ![[MASee MR_numberOfEntitiesWithPredicate:predicate] isEqual:@0];
+}
+
+- (void)toogleSeenWith:(MAUser *)user
+               success:(MASeeSuccessCallback)successCallback
+                 error:(MASeeErrorCallback)errorCallback {
+  [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
+    if ([self isSeenBy:user]) {
+      NSPredicate *predicate = [self _predicateWithProductAndUser:user];
+      [MASee MR_deleteAllMatchingPredicate:predicate
+                                 inContext:localContext];
+    } else {
+      MASee *see = [MASee MR_createEntityInContext:localContext];
+      see.product_uuid = self.uuid;
+      see.user_uuid = user.uuid;
     }
   } completion:^(BOOL contextDidSave, NSError *error) {
     if (error) {
