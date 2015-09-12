@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8175.2" systemVersion="14F27" minimumToolsVersion="Xcode 7.0">
+    <entity name="Like" representedClassName="MALike" syncable="YES">
+        <attribute name="product_uuid" attributeType="String" syncable="YES"/>
+        <attribute name="user_uuid" attributeType="String" syncable="YES"/>
+        <compoundIndexes>
+            <compoundIndex>
+                <index value="product_uuid"/>
+            </compoundIndex>
+            <compoundIndex>
+                <index value="user_uuid"/>
+            </compoundIndex>
+        </compoundIndexes>
+    </entity>
+    <elements>
+        <element name="Like" positionX="-63" positionY="-18" width="128" height="75"/>
+    </elements>
+</model>

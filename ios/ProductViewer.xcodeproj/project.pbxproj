@@ -17,6 +17,10 @@
 		BF93D2D51BA3A1E300CE5B97 /* UIImageView+WebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BF93D2D41BA3A1E300CE5B97 /* UIImageView+WebImage.m */; };
 		BF93D2D81BA3AE7C00CE5B97 /* MANavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BF93D2D71BA3AE7C00CE5B97 /* MANavigationBar.m */; };
 		BF93D2DB1BA454F900CE5B97 /* MASessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF93D2DA1BA454F900CE5B97 /* MASessionViewController.m */; };
+		BF93D2DD1BA45C3E00CE5B97 /* MagicalRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF93D2DC1BA45C3E00CE5B97 /* MagicalRecord.framework */; };
+		BF93D2E11BA45F3800CE5B97 /* ProductViewer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF93D2DF1BA45F3800CE5B97 /* ProductViewer.xcdatamodeld */; };
+		BF93D2E61BA45FCD00CE5B97 /* MALike.m in Sources */ = {isa = PBXBuildFile; fileRef = BF93D2E51BA45FCD00CE5B97 /* MALike.m */; };
+		BF93D2EA1BA4604F00CE5B97 /* MADataSeed.m in Sources */ = {isa = PBXBuildFile; fileRef = BF93D2E91BA4604F00CE5B97 /* MADataSeed.m */; };
 		BFB40E581BA35FC50088433C /* MAProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB40E561BA35FC50088433C /* MAProductCell.m */; };
 		BFC866C71BA35199002CF7C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC866C61BA35199002CF7C4 /* main.m */; };
 		BFC866E01BA35199002CF7C4 /* ProductViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC866DF1BA35199002CF7C4 /* ProductViewerTests.m */; };
@@ -59,6 +63,14 @@
 		BF93D2D71BA3AE7C00CE5B97 /* MANavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANavigationBar.m; sourceTree = "<group>"; };
 		BF93D2D91BA454F900CE5B97 /* MASessionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASessionViewController.h; sourceTree = "<group>"; };
 		BF93D2DA1BA454F900CE5B97 /* MASessionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASessionViewController.m; sourceTree = "<group>"; };
+		BF93D2DC1BA45C3E00CE5B97 /* MagicalRecord.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MagicalRecord.framework; path = Carthage/Build/iOS/MagicalRecord.framework; sourceTree = "<group>"; };
+		BF93D2DE1BA45D3E00CE5B97 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		BF93D2E01BA45F3800CE5B97 /* ProductViewer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProductViewer.xcdatamodel; sourceTree = "<group>"; };
+		BF93D2E31BA45FCD00CE5B97 /* MALike+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MALike+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BF93D2E41BA45FCD00CE5B97 /* MALike.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MALike.h; sourceTree = "<group>"; };
+		BF93D2E51BA45FCD00CE5B97 /* MALike.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MALike.m; sourceTree = "<group>"; };
+		BF93D2E81BA4604F00CE5B97 /* MADataSeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MADataSeed.h; sourceTree = "<group>"; };
+		BF93D2E91BA4604F00CE5B97 /* MADataSeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MADataSeed.m; sourceTree = "<group>"; };
 		BFB40E551BA35FC50088433C /* MAProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAProductCell.h; sourceTree = "<group>"; };
 		BFB40E561BA35FC50088433C /* MAProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAProductCell.m; sourceTree = "<group>"; };
 		BFC866C21BA35199002CF7C4 /* ProductViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,9 +101,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF93D2BD1BA3776800CE5B97 /* WebImage.framework in Frameworks */,
 				BF93D2CD1BA3931900CE5B97 /* AFNetworking.framework in Frameworks */,
+				BF93D2DD1BA45C3E00CE5B97 /* MagicalRecord.framework in Frameworks */,
 				BF93D2CF1BA3931C00CE5B97 /* Mantle.framework in Frameworks */,
+				BF93D2BD1BA3776800CE5B97 /* WebImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +121,7 @@
 		BF93D2BE1BA3777F00CE5B97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF93D2DC1BA45C3E00CE5B97 /* MagicalRecord.framework */,
 				BF93D2CE1BA3931C00CE5B97 /* Mantle.framework */,
 				BF93D2CA1BA3898D00CE5B97 /* AFNetworking.framework */,
 				BF93D2BC1BA3776800CE5B97 /* WebImage.framework */,
@@ -126,6 +140,15 @@
 				BF93D2D41BA3A1E300CE5B97 /* UIImageView+WebImage.m */,
 			);
 			path = category;
+			sourceTree = "<group>";
+		};
+		BF93D2E71BA4604300CE5B97 /* other */ = {
+			isa = PBXGroup;
+			children = (
+				BF93D2E81BA4604F00CE5B97 /* MADataSeed.h */,
+				BF93D2E91BA4604F00CE5B97 /* MADataSeed.m */,
+			);
+			path = other;
 			sourceTree = "<group>";
 		};
 		BFB40E511BA35F700088433C /* view */ = {
@@ -189,9 +212,10 @@
 			isa = PBXGroup;
 			children = (
 				BFC866EB1BA3527C002CF7C4 /* Assets.xcassets */,
+				BFC866F01BA3527C002CF7C4 /* Info.plist */,
 				BFC866EC1BA3527C002CF7C4 /* LaunchScreen.storyboard */,
 				BFC866EE1BA3527C002CF7C4 /* Main.storyboard */,
-				BFC866F01BA3527C002CF7C4 /* Info.plist */,
+				BF93D2DF1BA45F3800CE5B97 /* ProductViewer.xcdatamodeld */,
 			);
 			path = res;
 			sourceTree = "<group>";
@@ -201,10 +225,12 @@
 			children = (
 				BFC866F21BA3527C002CF7C4 /* AppDelegate.h */,
 				BFC866F31BA3527C002CF7C4 /* AppDelegate.m */,
+				BF93D2DE1BA45D3E00CE5B97 /* PrefixHeader.pch */,
 				BF93D2C01BA37AC700CE5B97 /* category */,
 				BFC866F41BA3527C002CF7C4 /* controller */,
 				BFC867071BA35969002CF7C4 /* datasource */,
 				BFC866F51BA3527C002CF7C4 /* model */,
+				BF93D2E71BA4604300CE5B97 /* other */,
 				BFB40E511BA35F700088433C /* view */,
 			);
 			path = src;
@@ -230,6 +256,9 @@
 		BFC866F51BA3527C002CF7C4 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				BF93D2E31BA45FCD00CE5B97 /* MALike+CoreDataProperties.h */,
+				BF93D2E41BA45FCD00CE5B97 /* MALike.h */,
+				BF93D2E51BA45FCD00CE5B97 /* MALike.m */,
 				BFC8670B1BA35A02002CF7C4 /* MAProduct.h */,
 				BFC8670C1BA35A02002CF7C4 /* MAProduct.m */,
 				BF93D2B91BA3735800CE5B97 /* MAUser.h */,
@@ -351,9 +380,10 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/WebImage.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/AFNetworking.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/MagicalRecord.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Mantle.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/WebImage.framework",
 			);
 			name = "Add Carthage Frameworks";
 			outputPaths = (
@@ -369,11 +399,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF93D2E61BA45FCD00CE5B97 /* MALike.m in Sources */,
 				BF93D2C31BA37B0500CE5B97 /* NSString+URLEncoding.m in Sources */,
 				BFC8670A1BA3597A002CF7C4 /* MAProductsDataSource.m in Sources */,
 				BFB40E581BA35FC50088433C /* MAProductCell.m in Sources */,
 				BF93D2D81BA3AE7C00CE5B97 /* MANavigationBar.m in Sources */,
 				BF93D2D51BA3A1E300CE5B97 /* UIImageView+WebImage.m in Sources */,
+				BF93D2EA1BA4604F00CE5B97 /* MADataSeed.m in Sources */,
+				BF93D2E11BA45F3800CE5B97 /* ProductViewer.xcdatamodeld in Sources */,
 				BFC866FA1BA3527C002CF7C4 /* AppDelegate.m in Sources */,
 				BF93D2DB1BA454F900CE5B97 /* MASessionViewController.m in Sources */,
 				BFC867001BA352AF002CF7C4 /* MAProductsViewController.m in Sources */,
@@ -515,6 +548,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ProductViewer/src/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/ProductViewer/res/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.marlonandrade.ProductViewer;
@@ -530,6 +565,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ProductViewer/src/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/ProductViewer/res/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.marlonandrade.ProductViewer;
@@ -541,6 +578,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				INFOPLIST_FILE = ProductViewerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.marlonandrade.ProductViewerTests;
@@ -553,6 +591,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				INFOPLIST_FILE = ProductViewerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.marlonandrade.ProductViewerTests;
@@ -592,6 +631,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BF93D2DF1BA45F3800CE5B97 /* ProductViewer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BF93D2E01BA45F3800CE5B97 /* ProductViewer.xcdatamodel */,
+			);
+			currentVersion = BF93D2E01BA45F3800CE5B97 /* ProductViewer.xcdatamodel */;
+			path = ProductViewer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BFC866BA1BA35199002CF7C4 /* Project object */;
 }
