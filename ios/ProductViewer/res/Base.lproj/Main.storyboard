@@ -28,7 +28,8 @@
                         <color key="tintColor" red="0.35686274509803922" green="0.34509803921568627" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.35686274509803922" green="0.34509803921568627" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                            <color key="textColor" red="0.96862745098039216" green="0.44705882352941173" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
@@ -39,7 +40,7 @@
             </objects>
             <point key="canvasLocation" x="-2182" y="-66"/>
         </scene>
-        <!--Title-->
+        <!--Session-->
         <scene sceneID="syb-SS-oyf">
             <objects>
                 <viewController id="mYT-UF-ZcW" customClass="MASessionViewController" sceneMemberID="viewController">
@@ -52,7 +53,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.95686274509803915" green="0.94901960784313721" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="isx-ox-Pgn">
+                    <navigationItem key="navigationItem" title="Session" id="isx-ox-Pgn">
                         <barButtonItem key="backBarButtonItem" title=" " id="W2l-QC-Jih"/>
                     </navigationItem>
                 </viewController>
@@ -276,7 +277,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.95686274509803915" green="0.94901960784313721" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="7mK-3U-lFw">
+                    <navigationItem key="navigationItem" title="COMPARTILHAR" id="7mK-3U-lFw">
                         <barButtonItem key="backBarButtonItem" title=" " id="Kbk-Dd-Dkl"/>
                     </navigationItem>
                 </viewController>
@@ -478,7 +479,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.95686274509803915" green="0.94901960784313721" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="nPO-le-Ooa">
+                    <navigationItem key="navigationItem" title="User Profile" id="nPO-le-Ooa">
                         <barButtonItem key="backBarButtonItem" title=" " id="Idg-yB-E1e"/>
                     </navigationItem>
                 </viewController>
@@ -495,6 +496,6 @@
         <image name="user_icon" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pkR-X8-nbU"/>
+        <segue reference="OvM-Vb-Vay"/>
     </inferredMetricsTieBreakers>
 </document>

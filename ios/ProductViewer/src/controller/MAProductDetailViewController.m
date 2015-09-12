@@ -37,6 +37,7 @@
   [self.likeRoundedContainer ma_addBorderWithColor:borderColor
                                              width:borderWidth];
   
+  self.title = self.product.title;
   [self.photoImageView ma_setImageWithURL:self.product.photoDetailURL];
   self.priceLabel.text = self.product.price;
   [self.userPictureImageView ma_setImageWithURL:self.product.user.avatarURL];
