@@ -35,7 +35,7 @@
             </objects>
             <point key="canvasLocation" x="-2182" y="-66"/>
         </scene>
-        <!--Session View Controller-->
+        <!--Title-->
         <scene sceneID="syb-SS-oyf">
             <objects>
                 <viewController id="mYT-UF-ZcW" customClass="MASessionViewController" sceneMemberID="viewController">
@@ -48,6 +48,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.95686274509803915" green="0.94901960784313721" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="isx-ox-Pgn">
+                        <barButtonItem key="backBarButtonItem" title=" " id="W2l-QC-Jih"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="waw-qf-0Kx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -227,6 +230,7 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="I3F-ff-UWg"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="veY-i7-1ly">
+                        <barButtonItem key="backBarButtonItem" title=" " id="bVu-Pf-eXZ"/>
                         <leftBarButtonItems>
                             <barButtonItem image="hamburguer_icon" id="bD4-rQ-wLJ"/>
                             <barButtonItem systemItem="search" id="WtX-jI-DRW"/>
@@ -264,6 +268,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.95686274509803915" green="0.94901960784313721" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="7mK-3U-lFw">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Kbk-Dd-Dkl"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P7I-zT-bwp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -291,6 +298,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.95686274509803915" green="0.94901960784313721" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="RBc-Zs-7An">
+                        <barButtonItem key="backBarButtonItem" title=" " id="tWN-Kv-sSq"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sP6-y5-pHM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -309,6 +319,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.95686274509803915" green="0.94901960784313721" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="nPO-le-Ooa">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Idg-yB-E1e"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SV8-dB-CYo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
