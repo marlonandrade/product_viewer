@@ -52,6 +52,13 @@
   }];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+  
+  NSArray *selectedIndexPaths = [self.collectionView indexPathsForSelectedItems];
+  [self.collectionView reloadItemsAtIndexPaths:selectedIndexPaths];
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
   if ([segue.destinationViewController isKindOfClass:[MAProductDetailViewController class]]) {
     MAProductDetailViewController *detailViewController = (MAProductDetailViewController *)segue.destinationViewController;

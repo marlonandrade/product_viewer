@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "MALikeImageView.h"
+
 @class MAProduct;
 @class MAProductCell;
 
@@ -28,7 +30,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *price;
 @property (weak, nonatomic) IBOutlet UIImageView *userPicture;
 @property (weak, nonatomic) IBOutlet UILabel *likeCount;
-@property (weak, nonatomic) IBOutlet UIImageView *likeIcon;
+@property (weak, nonatomic) IBOutlet MALikeImageView *likeIcon;
 
 @end
 

@@ -30,13 +30,7 @@
   [self.userPicture ma_setImageWithURL:product.user.avatarURL];
   
   self.likeCount.text = [product.likeCount stringValue];
-  
-  NSString *likeImage = @"icon_like";
-  if ([product isLikedBy:[MASession currentSession].user]) {
-    likeImage = [likeImage stringByAppendingString:@"_selected"];
-  }
-  
-  self.likeIcon.image = [UIImage imageNamed:likeImage];
+  [self.likeIcon setImageForProduct:product];
 }
 
 #pragma mark - View Lifecycle

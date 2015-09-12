@@ -8,6 +8,7 @@
 
 #import "MAProductDetailViewController.h"
 
+#import "MASession.h"
 #import "UIImageView+WebImage.h"
 #import "UIView+Bordered.h"
 #import "UIView+Rounded.h"
@@ -38,7 +39,9 @@
   [self.photoImageView ma_setImageWithURL:self.product.photoDetailURL];
   self.priceLabel.text = self.product.price;
   [self.userPictureImageView ma_setImageWithURL:self.product.user.avatarURL];
+  [self.likeIconImageView setImageForProduct:self.product];
 }
+
 
 /*
 #pragma mark - Navigation
@@ -49,5 +52,16 @@
   // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - IBActions
+
+- (IBAction)toggleLike:(id)sender {
+  [self.product toggleLikeWith:[MASession currentSession].user
+                       success:^(MAProduct *product) {
+                         [self.likeIconImageView setImageForProduct:product];
+                       } error:^(NSError *error) {
+                         NSLog(@"Error: %@", error);
+                       }];
+}
 
 @end

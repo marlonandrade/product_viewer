@@ -8,8 +8,8 @@
     <customFonts key="customFonts">
         <mutableArray key="HelveticaNeue.ttc">
             <string>HelveticaNeue-Bold</string>
-            <string>HelveticaNeue-Medium</string>
             <string>HelveticaNeue-Bold</string>
+            <string>HelveticaNeue-Medium</string>
         </mutableArray>
         <mutableArray key="HelveticaNeueLights.ttc">
             <string>HelveticaNeue-Light</string>
@@ -139,7 +139,7 @@
                                         <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lBd-jt-PTS">
                                             <rect key="frame" x="79" y="224" width="60" height="30"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_like" translatesAutoresizingMaskIntoConstraints="NO" id="Mtd-Gj-0wl">
+                                                <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_like" translatesAutoresizingMaskIntoConstraints="NO" id="Mtd-Gj-0wl" customClass="MALikeImageView">
                                                     <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="u59-tD-0P0"/>
@@ -298,6 +298,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P7u-dA-48q">
                                 <rect key="frame" x="20" y="336" width="32" height="32"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gB3-FO-h9D">
+                                        <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                        <connections>
+                                            <segue destination="woj-Bk-cY3" kind="show" id="OvM-Vb-Vay"/>
+                                        </connections>
+                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PjR-4F-uC1" userLabel="user_picture">
                                         <rect key="frame" x="1" y="1" width="30" height="30"/>
                                         <constraints>
@@ -308,8 +314,12 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="gB3-FO-h9D" firstAttribute="centerY" secondItem="P7u-dA-48q" secondAttribute="centerY" id="0gm-JI-IV9"/>
                                     <constraint firstAttribute="height" constant="32" id="1Et-ee-1UU"/>
+                                    <constraint firstItem="gB3-FO-h9D" firstAttribute="height" secondItem="P7u-dA-48q" secondAttribute="height" id="EMS-H4-mgI"/>
                                     <constraint firstItem="PjR-4F-uC1" firstAttribute="centerY" secondItem="P7u-dA-48q" secondAttribute="centerY" id="daD-0b-TZG"/>
+                                    <constraint firstItem="gB3-FO-h9D" firstAttribute="width" secondItem="P7u-dA-48q" secondAttribute="width" id="eOX-L1-Jk7"/>
+                                    <constraint firstItem="gB3-FO-h9D" firstAttribute="centerX" secondItem="P7u-dA-48q" secondAttribute="centerX" id="has-lD-B29"/>
                                     <constraint firstItem="PjR-4F-uC1" firstAttribute="centerX" secondItem="P7u-dA-48q" secondAttribute="centerX" id="kde-BF-gSV"/>
                                     <constraint firstAttribute="width" constant="32" id="t3N-aW-pLW"/>
                                 </constraints>
@@ -317,7 +327,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CrV-sh-tmH">
                                 <rect key="frame" x="548" y="336" width="32" height="32"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_like" translatesAutoresizingMaskIntoConstraints="NO" id="pOG-U0-nCa">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shG-vG-HjB">
+                                        <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                        <connections>
+                                            <action selector="toggleLike:" destination="YKU-nS-Sgh" eventType="touchUpInside" id="JmD-M3-dz9"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_like" translatesAutoresizingMaskIntoConstraints="NO" id="pOG-U0-nCa" customClass="MALikeImageView">
                                         <rect key="frame" x="1" y="1" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="l91-O7-uym"/>
@@ -328,7 +344,11 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="pOG-U0-nCa" firstAttribute="centerY" secondItem="CrV-sh-tmH" secondAttribute="centerY" id="CRA-UH-wl2"/>
+                                    <constraint firstItem="shG-vG-HjB" firstAttribute="height" secondItem="CrV-sh-tmH" secondAttribute="height" id="GVu-yq-Q0p"/>
+                                    <constraint firstItem="shG-vG-HjB" firstAttribute="centerX" secondItem="CrV-sh-tmH" secondAttribute="centerX" id="H7p-cG-JIb"/>
                                     <constraint firstAttribute="width" constant="32" id="P5M-C4-g6G"/>
+                                    <constraint firstItem="shG-vG-HjB" firstAttribute="width" secondItem="CrV-sh-tmH" secondAttribute="width" id="oxT-9B-AYU"/>
+                                    <constraint firstItem="shG-vG-HjB" firstAttribute="centerY" secondItem="CrV-sh-tmH" secondAttribute="centerY" id="uh5-vg-cAc"/>
                                     <constraint firstItem="pOG-U0-nCa" firstAttribute="centerX" secondItem="CrV-sh-tmH" secondAttribute="centerX" id="w7S-Pr-A6G"/>
                                     <constraint firstAttribute="height" constant="32" id="zG4-xM-324"/>
                                 </constraints>
@@ -341,10 +361,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abN-Aj-Y9W">
-                                <rect key="frame" x="248" y="371" width="105" height="49"/>
+                                <rect key="frame" x="258" y="371" width="85" height="49"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 80" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NjY-sd-rrb">
-                                        <rect key="frame" x="10" y="10" width="85" height="29"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 80" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NjY-sd-rrb">
+                                        <rect key="frame" x="10" y="10" width="65" height="29"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="85" id="1Dc-XM-2K9"/>
@@ -357,6 +377,7 @@
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="1Dc-XM-2K9"/>
+                                                <exclude reference="Rl2-L4-0Dv"/>
                                             </mask>
                                         </variation>
                                     </label>
@@ -418,6 +439,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="likeIconImageView" destination="pOG-U0-nCa" id="Cp3-dY-VGY"/>
                         <outlet property="likeRoundedContainer" destination="CrV-sh-tmH" id="PR7-4B-Otx"/>
                         <outlet property="photoImageView" destination="VgZ-XI-qJN" id="jK8-Fe-MvR"/>
                         <outlet property="priceLabel" destination="NjY-sd-rrb" id="lmF-Zd-sB5"/>
@@ -456,4 +478,7 @@
         <image name="icon_like" width="17" height="19"/>
         <image name="user_icon" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="OvM-Vb-Vay"/>
+    </inferredMetricsTieBreakers>
 </document>

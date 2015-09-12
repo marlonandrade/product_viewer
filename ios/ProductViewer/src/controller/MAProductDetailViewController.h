@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+#import "MALikeImageView.h"
 #import "MAProduct.h"
 
 @interface MAProductDetailViewController : UIViewController
@@ -18,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIView *userPictureRoundedContainer;
 @property (weak, nonatomic) IBOutlet UIImageView *userPictureImageView;
 @property (weak, nonatomic) IBOutlet UIView *likeRoundedContainer;
+@property (weak, nonatomic) IBOutlet MALikeImageView *likeIconImageView;
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 
 @end
