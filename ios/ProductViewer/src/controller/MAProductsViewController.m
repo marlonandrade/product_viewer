@@ -35,7 +35,14 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   
+  __block UIActivityIndicatorView *activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+  activity.center = self.view.center;
+  activity.hidesWhenStopped = YES;
+  [activity startAnimating];
+  [self.view addSubview:activity];
+  
   [self.productsDataSource fetchProducts:^(NSArray *products) {
+    [activity removeFromSuperview];
     self.products = products;
     [self.collectionView reloadData];
   } error:^(NSError *error) {

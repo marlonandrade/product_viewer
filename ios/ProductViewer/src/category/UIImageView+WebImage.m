@@ -13,7 +13,7 @@
 @implementation UIImageView (WebImage)
 
 - (void)ma_setImageWithURL:(NSURL *)url {
-  __block UIActivityIndicatorView *activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+  __block UIActivityIndicatorView *activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
   activity.center = self.center;
   activity.hidesWhenStopped = YES;
   [activity startAnimating];
