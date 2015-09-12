@@ -12,6 +12,7 @@
 
 @interface MAUser : MTLModel <MTLJSONSerializing>
 
+@property (nonatomic, copy) NSString *uuid;
 @property (nonatomic, copy, readonly) NSURL *avatarURL;
 @property (nonatomic, copy) NSString *initials;
 @property (nonatomic, copy) NSString *fullName;

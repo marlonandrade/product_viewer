@@ -9,14 +9,26 @@
 #import <UIKit/UIKit.h>
 
 @class MAProduct;
+@class MAProductCell;
+
+@protocol MAProductCellLikeDelegate <NSObject>
+
+@required
+- (void)productCellToggleLike:(MAProductCell *)cell;
+
+@end
 
 @interface MAProductCell : UICollectionViewCell
 
+@property (nonatomic, weak) id<MAProductCellLikeDelegate> likeDelegate;
 @property (nonatomic, weak) MAProduct* product;
 
 @property (weak, nonatomic) IBOutlet UIImageView *picture;
 @property (weak, nonatomic) IBOutlet UILabel *title;
 @property (weak, nonatomic) IBOutlet UILabel *price;
 @property (weak, nonatomic) IBOutlet UIImageView *userPicture;
+@property (weak, nonatomic) IBOutlet UILabel *likeCount;
+@property (weak, nonatomic) IBOutlet UIImageView *likeIcon;
 
 @end
+

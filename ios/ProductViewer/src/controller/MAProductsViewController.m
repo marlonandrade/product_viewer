@@ -8,10 +8,12 @@
 
 #import "MAProductsViewController.h"
 
+#import "MAProduct.h"
+#import "MASession.h"
 #import "MAProductCell.h"
 #import "MAProductsDataSource.h"
 
-@interface MAProductsViewController () <UICollectionViewDelegateFlowLayout>
+@interface MAProductsViewController () <UICollectionViewDelegateFlowLayout, MAProductCellLikeDelegate>
 
 @property (nonatomic, strong) NSArray *products;
 @property (nonatomic, strong) MAProductsDataSource *productsDataSource;
@@ -75,6 +77,7 @@
   MAProductCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([MAProductCell class])
                                                                   forIndexPath:indexPath];
   
+  cell.likeDelegate = self;
   cell.product = self.products[indexPath.row];
   
   return cell;
@@ -96,6 +99,19 @@ int const kProductColumns = 2;
       (flowLayout.sectionInset.left + flowLayout.sectionInset.right);
   
   return CGSizeMake(width / kProductColumns, kProductHeight);
+}
+
+#pragma mark - MAProductCellLikeDelegate
+
+- (void)productCellToggleLike:(MAProductCell *)cell {
+  NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
+  MAProduct *product = self.products[indexPath.row];
+  [product toggleLikeWith:[MASession currentSession].user
+                  success:^(MAProduct *product) {
+                    [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
+                  } error:^(NSError *error) {
+                    NSLog(@"Error: %@", error);
+                  }];
 }
 
 @end

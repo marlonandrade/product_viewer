@@ -1,5 +1,5 @@
 //
-//  MALike.h
+//  MASession.h
 //  ProductViewer
 //
 //  Created by Marlon Andrade on 9/12/15.
@@ -7,14 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
 
-NS_ASSUME_NONNULL_BEGIN
+#import "MAUser.h"
 
-@interface MALike : NSManagedObject
+@interface MASession : NSObject
+
+@property (nonatomic, strong) MAUser *user;
+
++ (instancetype)currentSession;
 
 @end
-
-NS_ASSUME_NONNULL_END
-
-#import "MALike+CoreDataProperties.h"

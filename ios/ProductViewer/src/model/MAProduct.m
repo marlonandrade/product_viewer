@@ -8,9 +8,60 @@
 
 #import "MAProduct.h"
 
+#import "MALike.h"
+#import "MAUser.h"
 #import "NSURL+URLEncoding.h"
 
+@interface MAProduct ()
+
+- (NSPredicate *)_predicateWithProductAndUser:(MAUser *)user;
+
+@end
+
 @implementation MAProduct
+
+#pragma mark - Public Interface
+
+- (NSNumber *)likeCount {
+  NSPredicate *predicate = [NSPredicate predicateWithFormat:@"product_uuid = %@", self.uuid];
+  return [MALike MR_numberOfEntitiesWithPredicate:predicate];
+  
+}
+
+- (BOOL)isLikedBy:(MAUser *)user {
+  NSPredicate *predicate = [self _predicateWithProductAndUser:user];
+  return ![[MALike MR_numberOfEntitiesWithPredicate:predicate] isEqual:@0];
+}
+
+- (void)toggleLikeWith:(MAUser *)user
+               success:(MALikeSuccessCallback)successCallback
+                 error:(MALikeErrorCallback)errorCallback {
+  [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
+    if ([self isLikedBy:user]) {
+      NSPredicate *predicate = [self _predicateWithProductAndUser:user];
+      [MALike MR_deleteAllMatchingPredicate:predicate
+                                  inContext:localContext];
+    } else {
+      MALike *like = [MALike MR_createEntityInContext:localContext];
+      like.product_uuid = self.uuid;
+      like.user_uuid = user.uuid;
+    }
+  } completion:^(BOOL contextDidSave, NSError *error) {
+    if (error) {
+      errorCallback(error);
+    } else {
+      successCallback(self);
+    }
+  }];
+}
+
+#pragma mark - Private Interface
+
+- (NSPredicate *)_predicateWithProductAndUser:(MAUser *)user {
+  return [NSPredicate predicateWithFormat:@"product_uuid = %@ AND user_uuid = %@", self.uuid, user.uuid];
+}
+
+#pragma mark - MTLJSONSerializing
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
   return @{

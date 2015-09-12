@@ -21,6 +21,7 @@
 		BF93D2E11BA45F3800CE5B97 /* ProductViewer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF93D2DF1BA45F3800CE5B97 /* ProductViewer.xcdatamodeld */; };
 		BF93D2E61BA45FCD00CE5B97 /* MALike.m in Sources */ = {isa = PBXBuildFile; fileRef = BF93D2E51BA45FCD00CE5B97 /* MALike.m */; };
 		BF93D2EA1BA4604F00CE5B97 /* MADataSeed.m in Sources */ = {isa = PBXBuildFile; fileRef = BF93D2E91BA4604F00CE5B97 /* MADataSeed.m */; };
+		BF93D2ED1BA475CF00CE5B97 /* MASession.m in Sources */ = {isa = PBXBuildFile; fileRef = BF93D2EC1BA475CF00CE5B97 /* MASession.m */; };
 		BFB40E581BA35FC50088433C /* MAProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB40E561BA35FC50088433C /* MAProductCell.m */; };
 		BFC866C71BA35199002CF7C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC866C61BA35199002CF7C4 /* main.m */; };
 		BFC866E01BA35199002CF7C4 /* ProductViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC866DF1BA35199002CF7C4 /* ProductViewerTests.m */; };
@@ -71,6 +72,8 @@
 		BF93D2E51BA45FCD00CE5B97 /* MALike.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MALike.m; sourceTree = "<group>"; };
 		BF93D2E81BA4604F00CE5B97 /* MADataSeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MADataSeed.h; sourceTree = "<group>"; };
 		BF93D2E91BA4604F00CE5B97 /* MADataSeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MADataSeed.m; sourceTree = "<group>"; };
+		BF93D2EB1BA475CF00CE5B97 /* MASession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASession.h; sourceTree = "<group>"; };
+		BF93D2EC1BA475CF00CE5B97 /* MASession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASession.m; sourceTree = "<group>"; };
 		BFB40E551BA35FC50088433C /* MAProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAProductCell.h; sourceTree = "<group>"; };
 		BFB40E561BA35FC50088433C /* MAProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAProductCell.m; sourceTree = "<group>"; };
 		BFC866C21BA35199002CF7C4 /* ProductViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -261,6 +264,8 @@
 				BF93D2E51BA45FCD00CE5B97 /* MALike.m */,
 				BFC8670B1BA35A02002CF7C4 /* MAProduct.h */,
 				BFC8670C1BA35A02002CF7C4 /* MAProduct.m */,
+				BF93D2EB1BA475CF00CE5B97 /* MASession.h */,
+				BF93D2EC1BA475CF00CE5B97 /* MASession.m */,
 				BF93D2B91BA3735800CE5B97 /* MAUser.h */,
 				BF93D2BA1BA3735800CE5B97 /* MAUser.m */,
 			);
@@ -415,6 +420,7 @@
 				BFC867061BA352D8002CF7C4 /* MAProductShareViewController.m in Sources */,
 				BFC866C71BA35199002CF7C4 /* main.m in Sources */,
 				BF93D2C61BA37B5F00CE5B97 /* NSURL+URLEncoding.m in Sources */,
+				BF93D2ED1BA475CF00CE5B97 /* MASession.m in Sources */,
 				BF93D2BB1BA3735800CE5B97 /* MAUser.m in Sources */,
 				BFC867031BA352CE002CF7C4 /* MAProductDetailViewController.m in Sources */,
 			);

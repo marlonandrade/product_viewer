@@ -12,6 +12,11 @@
 
 @import Mantle;
 
+@class MAProduct;
+
+typedef void (^MALikeSuccessCallback)(MAProduct *product);
+typedef void (^MALikeErrorCallback)(NSError *error);
+
 @interface MAProduct : MTLModel <MTLJSONSerializing>
 
 @property (nonatomic, copy) NSString *uuid;
@@ -21,5 +26,11 @@
 @property (nonatomic, copy) NSString *price;
 
 @property (nonatomic, strong) MAUser *user;
+
+- (NSNumber *)likeCount;
+- (BOOL)isLikedBy:(MAUser *)user;
+- (void)toggleLikeWith:(MAUser *)user
+               success:(MALikeSuccessCallback)successCallback
+                 error:(MALikeErrorCallback)errorCallback;
 
 @end
