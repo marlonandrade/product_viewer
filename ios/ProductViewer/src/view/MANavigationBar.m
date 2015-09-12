@@ -8,6 +8,12 @@
 
 #import "MANavigationBar.h"
 
+@interface MANavigationBar ()
+
+- (void)_setupLogo;
+
+@end
+
 @implementation MANavigationBar
 
 #pragma mark - View Lifecycle
@@ -15,8 +21,12 @@
 - (void)awakeFromNib {
   [super awakeFromNib];
   
-  NSLog(@"navigation bar awake from nib");
-  
+  [self _setupLogo];
+}
+
+#pragma mark - Private Interface
+
+- (void)_setupLogo {
   UIImage *logo = [UIImage imageNamed:@"logo_nav"];
   UIImageView *logoImageView = [[UIImageView alloc] initWithImage:logo];
   logoImageView.center = self.center;

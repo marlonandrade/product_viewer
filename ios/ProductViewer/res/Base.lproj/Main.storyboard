@@ -34,6 +34,24 @@
             </objects>
             <point key="canvasLocation" x="-2182" y="-66"/>
         </scene>
+        <!--Session View Controller-->
+        <scene sceneID="syb-SS-oyf">
+            <objects>
+                <viewController id="mYT-UF-ZcW" customClass="MASessionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mTn-7q-t0U"/>
+                        <viewControllerLayoutGuide type="bottom" id="XWE-ze-bav"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="78d-R5-7nF">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.95686274509803915" green="0.94901960784313721" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="waw-qf-0Kx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-933" y="-807"/>
+        </scene>
         <!--Products-->
         <scene sceneID="8Lj-Bk-0SA">
             <objects>
@@ -178,7 +196,11 @@
                             <barButtonItem image="hamburguer_icon" id="bD4-rQ-wLJ"/>
                             <barButtonItem systemItem="search" id="WtX-jI-DRW"/>
                         </leftBarButtonItems>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="3e1-M8-0D6"/>
+                        <barButtonItem key="rightBarButtonItem" image="user_icon" id="3e1-M8-0D6">
+                            <connections>
+                                <segue destination="mYT-UF-ZcW" kind="show" id="3Ua-ML-t5h"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </collectionViewController>
@@ -260,5 +282,6 @@
     </scenes>
     <resources>
         <image name="hamburguer_icon" width="20" height="15"/>
+        <image name="user_icon" width="30" height="30"/>
     </resources>
 </document>
