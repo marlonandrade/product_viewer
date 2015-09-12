@@ -22,7 +22,7 @@
         <scene sceneID="sJH-1W-Ozd">
             <objects>
                 <navigationController storyboardIdentifier="Main Navigation" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FGm-DT-Rqy" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="pqh-dn-pH7" customClass="MANavigationBar">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="pqh-dn-pH7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.35686274509803922" green="0.34509803921568627" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
@@ -230,15 +230,19 @@
                             <outlet property="delegate" destination="beI-1k-Y4d" id="1T8-Uo-7W6"/>
                         </connections>
                     </collectionView>
-                    <toolbarItems>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="I3F-ff-UWg"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="veY-i7-1ly">
+                        <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title=" " id="bVu-Pf-eXZ"/>
                         <leftBarButtonItems>
                             <barButtonItem image="hamburguer_icon" id="bD4-rQ-wLJ"/>
                             <barButtonItem systemItem="search" id="WtX-jI-DRW"/>
                         </leftBarButtonItems>
+                        <button key="titleView" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="EDV-h1-skg">
+                            <rect key="frame" x="261" y="7" width="78" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="logo_nav"/>
+                        </button>
                         <barButtonItem key="rightBarButtonItem" image="user_icon" id="3e1-M8-0D6">
                             <connections>
                                 <segue destination="mYT-UF-ZcW" kind="show" id="3Ua-ML-t5h"/>
@@ -487,9 +491,10 @@
         <image name="hamburguer_icon" width="20" height="15"/>
         <image name="icon_like" width="17" height="19"/>
         <image name="icon_seen_ok" width="24" height="24"/>
+        <image name="logo_nav" width="24" height="30"/>
         <image name="user_icon" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OvM-Vb-Vay"/>
+        <segue reference="pkR-X8-nbU"/>
     </inferredMetricsTieBreakers>
 </document>
